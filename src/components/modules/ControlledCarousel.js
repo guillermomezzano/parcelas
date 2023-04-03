@@ -4,6 +4,8 @@ import imageCarouselOne from "../../image/imageCarouselOne.jpg";
 import imageCarouselTwo from "../../image/imageCarouselTwo.jpg";
 
 const ControlledCarousel = () => {
+  var a = 1;
+
   return (
     <div>
       <div className="carousel">
