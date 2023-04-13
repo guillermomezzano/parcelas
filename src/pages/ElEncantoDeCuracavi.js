@@ -41,7 +41,7 @@ const ElEncantoDeCuracavi = () => {
 
         <div>
           <div className="conteinerParcelaTitle">
-            <h1>el encanto de curacaví</h1>
+            <h1>el hanamichi se la come</h1>
             <hr></hr>
             <h4>CURACAVÍ</h4>
             <p>
