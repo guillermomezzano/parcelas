@@ -1,6 +1,6 @@
 import TextField from "@mui/material/TextField";
 import mapaLoteo from "../../image/mapaLoteo.jpg";
-
+import "./LoteoContactHome.css";
 const LoteoContactHome = () => {
   return (
     <div>

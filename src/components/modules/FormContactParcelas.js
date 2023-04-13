@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import "./FormContactParcelas.css";
 const FormContactParcelas = () => {
   return (
     <div className="divConteinerFormContactFooter">
@@ -24,7 +24,7 @@ const FormContactParcelas = () => {
           <option value="proyecto3">proyecto 3</option>
           <option value="proyecto4">proyecto 4</option>
         </select>
-        <textarea rows="10" cols="50"></textarea>
+        <textarea rows="7" cols="50" required></textarea>
         <button className="btnFonteinerFormContactFooter">agendar</button>
       </form>
     </div>

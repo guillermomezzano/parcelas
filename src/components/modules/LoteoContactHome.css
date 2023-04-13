@@ -1,0 +1,159 @@
+/* ___________Styles of ContactHome_____________ */
+
+
+
+
+/* contenedor principal */
+.conteinerFormHomeVendeTuLoteoImg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-image: url("../../image/imageParallax.jpg");
+    width: 100%;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  
+  
+  .divWitheHomeVendeTuLoteo{
+  
+    background-color: white;
+    width: 100%;
+    height: 400px;
+   
+   
+  }
+  
+  .conteinerFormHomeVendeTuLoteo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+  }
+  
+  .conteinerImageLoteo{
+    font-size: large;
+    display: flex;
+    background-color: black;
+    width: 70%;
+    height: 100%; 
+  }
+  
+  
+  
+  .conteinerImageLoteo div{
+    width: 100%;
+    padding: 3%;
+  }
+  
+  .conteinerImageLoteo div > p,h2{
+    margin-top: 5%;
+    color: #fff;
+  }
+   
+  .conteinerImageLoteo div > p{
+   font-size: larger;
+  }
+
+
+  .btmSailLoteoContact{
+    font-size: x-large;
+    color:white;
+    text-transform: uppercase;
+    border-style: none;
+    border-radius: 6px;
+    background-color: black; 
+    width: 50%;
+    height: 70px;
+    margin: 2%;
+  
+  }
+  
+  .btmSailLoteoContact:hover{
+    background-color:rgb(53, 52, 52);;
+    transition: .5s;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+  @media (max-width: 1650px) {
+
+    .conteinerImageLoteo img{
+      width: 50%;
+
+    
+    }
+    .conteinerImageLoteo{
+    
+      width: 90%;
+      
+    }
+
+
+  }
+
+/* 
+  @media (max-width: 800px) {
+    .divWitheHomeVendeTuLoteo{
+      margin-bottom: 200px; 
+    }
+  } */
+  @media (max-width: 50.625em) {
+
+      .conteinerImageLoteo{
+        display: flex;
+        flex-direction: column;
+        /* position: absolute; */
+        /* background-color: black;
+        
+        height: 100%;
+        
+        left: 15%; */
+       
+        width: 90%;
+        
+      }
+      
+      .conteinerImageLoteo img{
+        width: 100%;
+        height: 100%;
+      
+      }
+      
+      .conteinerImageLoteo div{
+        /* width: 100%; */
+        padding: 3%;
+        /* height: 100%; */
+      }
+      
+      .conteinerImageLoteo div > h2{
+        margin: 5%;
+        font-size:xx-large;
+      }
+
+      .conteinerImageLoteo div > p{
+        margin: 5%;
+        font-size:large;
+      }
+     
+        
+      .btmSailLoteoContact{
+        margin-top: 5%;
+        width: 90%;
+        left: 13%; 
+      }
+      .divWitheHomeVendeTuLoteo{
+        height: 500px;  
+      }
+
+    }

@@ -1,6 +1,8 @@
 import Navbar from "../components/modules/Navbar";
 import Footer from "../components/sections/Footer";
-import imageGaleria from "../image/imageGaleria.jpg";
+import imageGaleria from "../image/imageVendeLoteo.jpg";
+
+import "./QuienesSomos.css";
 
 const QuinesSomos = () => {
   return (
@@ -72,6 +74,22 @@ const QuinesSomos = () => {
           </p>
         </div>
       </div>
+      <form className="formContactQuienesSomos">
+        <h1>Contáctanos</h1>
+        <div className="conteinerInputFormContactQuienesSomos">
+          <input type="text" required placeholder="Nombre"></input>
+          <input type="text" required placeholder="Apellido"></input>
+          <input
+            type="email"
+            required
+            placeholder="Email"
+            pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
+          ></input>
+          <input type="tel" required placeholder="Telefono"></input>
+        </div>
+        <textarea rows="7" cols="50" required placeholder="Mensaje"></textarea>
+        <button className="btnFormContactQuienesSomos">agendar</button>
+      </form>
       <Footer />
     </div>
   );

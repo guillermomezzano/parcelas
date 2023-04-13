@@ -1,0 +1,268 @@
+/* ___________styles of carrousel and card___________ */
+
+
+.conteinerTitleCarrouselParcelasHome{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+   
+  }
+
+/* estilos carusel divConteinerParcelas*/
+.divConteinerParcelas {
+    background-color:white;
+    padding: 3%; 
+}
+    
+.divConteinerParcelasCarusel{
+    width: 90%;
+    margin: auto;
+}
+
+.slick-slide > div {
+    /* margin:  20px; */
+}
+.slick-list {
+    /* margin: 10px; */
+}
+  
+  /* estilos para el titulo del carrusel de cartas  */
+.tittleServices{
+    font-size:100px;
+    text-transform: uppercase;
+    margin: 0px;
+}
+  
+hr{
+    margin: 0;
+}
+  
+.DowntittleServices{
+    font-size:50px;
+  
+    margin: 0px;
+}
+  
+  
+  
+.details{
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  list-style: none;
+  align-items:center;
+  font-size:large;
+  /* margin-top: 10%; */
+  color: white;
+}
+
+.conteinerUnaParcelaCarusel{
+   padding: 5%;
+}
+
+.conteinerUnaParcelaCarusel figure {
+    position: relative;
+    width: auto;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0%;
+    
+}
+  
+  
+.conteinerUnaParcelaCarusel figure img {
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;  
+    vertical-align: top;
+}
+  
+.btmDetailUnaParcela{
+    font-size: larger;
+    color: #fff;
+    margin-top: 10%;
+    width: 50%;
+    height: 10%;
+    text-transform: uppercase;
+    border-radius: 6px;
+    border-style: none;
+    background-color: black; 
+}
+  
+.btmDetailUnaParcela:hover{
+    background-color: white; 
+    color: black;
+    transition: .5s;
+    cursor: pointer;
+}
+  
+.conteinerUnaParcelaCarusel figure .capa{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(53, 52, 52,0.8);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+  
+.conteinerUnaParcelaCarusel figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+    color: #fff;
+}
+  
+.conteinerUnaParcelaCarusel figure:hover > .capa h2{
+    margin-top: 100px;
+    margin-bottom: 15px;
+}
+  
+.conteinerUnaParcelaCarusel figure:hover > img{
+    transform: scale(1.3);
+}
+  
+.conteinerUnaParcelaCarusel figure .capa h2{
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 500ms ease-out;
+    margin-top: 40px;
+}
+  
+  /*contenedor de formulario*/
+.conteinerFormContactHomeParcelas{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    height: 400px;
+}
+  
+.conteinerFormContactHomeParcelas h2 {
+    color: white;
+    text-align: center;
+    margin-top: 0%;
+
+   
+}
+  
+.formContactHomeParcelas{
+    font-size: large;
+    margin-top: 5%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    height: 60px;
+    background: #fff;
+    width: 70%;
+    background: black;
+}
+  
+.btnContactHome{
+    color:white;
+    text-transform: uppercase;
+    border-style: none;
+    background-color: rgb(53, 52, 52) ;
+    height: 100%;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+  
+.btnContactHome:hover{
+    background: rgba(154, 152, 152, 0.6);
+    transition: .5s;
+    cursor: pointer;
+}
+  
+.formContactHomeParcelas input{
+    font-size: x-large;
+    height: 100%;
+    width: 100%;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    border-style: none;
+    padding: 2%;
+}
+  
+.formContactHomeParcelas input:focus{
+    outline: none;
+}
+
+@media (max-width: 1820px) {
+
+    .details{
+        font-size: small;
+    }
+  }
+
+@media (max-width: 1600px) {
+
+    .btmDetailUnaParcela{
+      margin-top: 10%
+    }
+
+    .conteinerUnaParcelaCarusel figure:hover > .capa h2{
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+   
+}
+
+@media (max-width: 1650px) {
+
+    .btmDetailUnaParcela{
+      margin-top: 10%
+    }
+   
+}
+
+@media (max-width: 1240px) {
+
+    .conteinerUnaParcelaCarusel figure:hover > .capa h2{
+      margin-top: 10px;
+      margin-bottom: 10px;
+    } 
+  }
+
+@media (max-width: 50.625em) {
+    .tittleServices{
+        font-size:50px;
+        margin-top: 10%;
+    }
+
+    .DowntittleServices{
+        font-size:30px;     
+    }
+
+    .divConteinerParcelas {
+        padding-bottom: 10%; 
+    }
+
+    .conteinerUnaParcelaCarusel figure .capa{
+       padding-top: 15%;
+    }
+    .conteinerFormContactHomeParcelas h2 {
+     font-size: x-large;
+    }
+
+    .formContactHomeParcelas{
+       flex-direction: column;
+    }
+    .formContactHomeParcelas input{  
+        width: 150%; 
+        border-radius: 6px; 
+        margin-bottom: 10%;
+        padding: 20px;
+    }
+    .btnContactHome{
+        
+        border-radius: 6px;
+        padding: 20px;
+        width: 150%; 
+    }
+
+}

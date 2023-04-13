@@ -1,8 +1,8 @@
-// import "./App.css";
+import "./Navbar.css";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailIcon from "@mui/icons-material/Email";
-import logo2 from "../../image/logo2.png";
+import logo from "../../image/logo.png";
 import { Link } from "react-router-dom";
 
 const NabVar = () => {
@@ -11,16 +11,16 @@ const NabVar = () => {
       <div className="topBar">
         <div className="topBarContenedorCorreo">
           <EmailIcon fontSize="large" sx={{ color: "white" }} />
-          <p>correo@gmail.com</p>
+          <p>cristobal.foucaut@inmobiliariaelencanto.com</p>
         </div>
-        <a href="#">
+        <a href="">
           <InstagramIcon fontSize="large" sx={{ color: "white" }} />
         </a>
       </div>
       <nav>
         <Link to="/">
-          <a href="#" className="logo">
-            <img src={logo2}></img>
+          <a className="logo">
+            <img src={logo}></img>
           </a>
         </Link>
 
@@ -34,28 +34,38 @@ const NabVar = () => {
           <ul>
             <li>
               <Link to="/">
-                <a href="#">Home</a>
+                <a>Home</a>
               </Link>
             </li>
             <li className="dropdown">
-              <Link to="/Parcelas">
-                <a href="#" id="aServiciosNavbar">
-                  Servicios
+              <Link to="/Proyectos">
+                <a id="aServiciosNavbar">
+                  proyectos
                   <div className="divSubmenu"></div>
                   <ul className="submenu">
                     <li>
-                      <Link to="/Parcela">
-                        <a href="#">Servicio 1</a>
+                      <Link to="/HaciendaSantaJulia">
+                        <a>Hacienda santa Julia</a>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/Parcela">
-                        <a href="#">Servicio 2</a>
+                      <Link to="/ValleDelToro">
+                        <a>Valle del Toro</a>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/Parcela">
-                        <a href="#">Servicio 3</a>
+                      <Link to="/ElEncantoDeCuracavi">
+                        <a>El Encanto de Curacaví</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/ElEncantoDeCuracaviII">
+                        <a>El Encanto de Curacaví II</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/ElEncantoDeLoreto">
+                        <a>El Encanto de Loreto</a>
                       </Link>
                     </li>
                   </ul>
@@ -64,14 +74,12 @@ const NabVar = () => {
             </li>
             <li>
               <Link to="/VendeTuCampo">
-                <a href="#" id="vendetucampo">
-                  Vende tu campo
-                </a>
+                <a>Vende tu campo</a>
               </Link>
             </li>
             <li>
               <Link to="/QuinesSomos">
-                <a href="#">quienes somos</a>
+                <a>quienes somos</a>
               </Link>
             </li>
             <li>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./FormContactVendeTuCampo.css";
 
 const FormContactVendeTuCampo = () => {
   return (
@@ -23,11 +24,11 @@ const FormContactVendeTuCampo = () => {
           <input
             type="text"
             required
-            placeholder="Cantidad de hectaráas"
+            placeholder="Cantidad de hectaréas"
           ></input>
         </div>
 
-        <textarea rows="10" cols="50"></textarea>
+        <textarea rows="7" cols="50" required></textarea>
         <button className="btnFonteinerFormContactFooter">agendar</button>
       </form>
     </div>

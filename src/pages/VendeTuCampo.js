@@ -1,6 +1,7 @@
 import Navbar from "../components/modules/Navbar";
 import Footer from "../components/sections/Footer";
 import FormContactVendeTuCampo from "../components/modules/FormContactVendeTuCampo";
+import "./VendeTuCampo.css";
 
 const VendeTuCampo = () => {
   return (

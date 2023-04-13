@@ -1,41 +1,24 @@
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { Link } from "react-router-dom";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import image1 from "../../image/image1.jpg";
-import React from "react";
+import "./SectionParcelasHome.css";
 import Slider from "react-slick";
-
-import image2 from "../../image/image2.jpg";
+import { Link } from "react-router-dom";
+import HaciendaSantaJulia from "../../image/haciendaSantaJulia/haciendaSantajulia6.jpg";
+import ElEncantoDeLoreto from "../../image/elEncantoDeLoreto/elEncantoDeLoreto10.jpg";
+import carruselElEncantoDeCuracavi from "../../image/elEncantoDeCuracavi/carruselElEncantoDeCuracavi.jpg";
+import ValleDelToro from "../../image/valleDelToro/b.jpg";
+import carruselElEncantoDeCuracaviII from "../../image/haciendaSantaJulia/haciendaSantajulia8.jpg";
 
 const SectionParcelasHome = () => {
-  function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          display: "block",
-          background: "black",
-          color: "white",
-        }}
-        onClick={onClick}
-      />
-    );
-  }
-
   const settings = {
     dots: true,
     infinite: true,
-    speed: 2000,
     slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    autoplay: false,
-    autoplaySpeed: 2000,
-    // nextArrow: <SampleNextArrow />,
-    // prevArrow: <SampleNextArrow />,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SampleNextArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -47,7 +30,7 @@ const SectionParcelasHome = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -55,7 +38,7 @@ const SectionParcelasHome = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 700,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -63,30 +46,52 @@ const SectionParcelasHome = () => {
       },
     ],
   };
+
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: "flex",
+          alignItems: "center",
+          background: "black",
+          height: "200px",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
   return (
     <div>
-      <div>
-        <p className="tittleServices">nuestras parcelas</p>
+      <div className="conteinerTitleCarrouselParcelasHome">
+        <h1 className="tittleServices">nuestras parcelas</h1>
         <hr></hr>
-        <p className="DowntittleServices">bajada del tirulo</p>
+        <h3 className="DowntittleServices">
+          Selecciona la parcela de tu preferencia para mayor información
+        </h3>
       </div>
       <div className="divConteinerParcelas">
         <div className="divConteinerParcelasCarusel">
           <Slider {...settings}>
             <div className="conteinerUnaParcelaCarusel">
               <figure>
-                <img src={image1} alt="" />
+                <img src={HaciendaSantaJulia} alt="" />
 
                 <div className="capa">
-                  <h3>slee dw</h3>
-                  <p>loren de dedsesedesdesdesdesdesde</p>
+                  <h2>Hacienda santa Julia</h2>
+                  <h3>Curacaví</h3>
                   <lu className="details">
-                    <li> 100 kilimetros </li>
-                    <li> 100 porecio </li>
-                    <li> 100 kilimetros </li>
-                    <li> 100 kilimetros </li>
+                    <li> Alta plus valia </li>
+                    <li> Luz </li>
+                    <li> Rol Propio </li>
+                    <li> Agua </li>
+                    <li> Posibilidad de crédito directo </li>
+                    <li> Entrada y Acceso controlado </li>
                   </lu>
-                  <Link to="/Parcela">
+                  <Link to="/HaciendaSantaJulia">
                     <button className="btmDetailUnaParcela">detalle</button>
                   </Link>
                 </div>
@@ -94,18 +99,20 @@ const SectionParcelasHome = () => {
             </div>
             <div className="conteinerUnaParcelaCarusel">
               <figure>
-                <img src={image2} alt="" />
+                <img src={ValleDelToro} alt="" />
 
                 <div className="capa">
-                  <h3>slee dw</h3>
-                  <p>loren de dedsesedesdesdesdesdesde</p>
+                  <h2>Valle del Toro</h2>
+                  <h3>Curacaví</h3>
                   <lu className="details">
-                    <li> 100 kilimetros </li>
-                    <li> 100 porecio </li>
-                    <li> 100 kilimetros </li>
-                    <li> 100 kilimetros </li>
+                    <li> Alta plus valia </li>
+                    <li> Luz </li>
+                    <li> Rol Propio </li>
+                    <li> Agua </li>
+                    <li> Posibilidad de crédito directo </li>
+                    <li> Entrada y Acceso controlado </li>
                   </lu>
-                  <Link to="/Parcela">
+                  <Link to="/ValleDelToro">
                     <button className="btmDetailUnaParcela">detalle</button>
                   </Link>
                 </div>
@@ -113,18 +120,20 @@ const SectionParcelasHome = () => {
             </div>
             <div className="conteinerUnaParcelaCarusel">
               <figure>
-                <img src={image1} alt="" />
+                <img src={carruselElEncantoDeCuracavi} alt="" />
 
                 <div className="capa">
-                  <h3>slee dw</h3>
-                  <p>loren de dedsesedesdesdesdesdesde</p>
+                  <h2>El Encanto de Curacaví</h2>
+                  <h3>Curacaví</h3>
                   <lu className="details">
-                    <li> 100 kilimetros </li>
-                    <li> 100 porecio </li>
-                    <li> 100 kilimetros </li>
-                    <li> 100 kilimetros </li>
+                    <li> Alta plus valia </li>
+                    <li> Luz </li>
+                    <li> Rol Propio </li>
+                    <li> Agua </li>
+                    <li> Posibilidad de crédito directo </li>
+                    <li> Entrada y Acceso controlado </li>
                   </lu>
-                  <Link to="/Parcela">
+                  <Link to="/HaciendaSantaJulia">
                     <button className="btmDetailUnaParcela">detalle</button>
                   </Link>
                 </div>
@@ -132,18 +141,20 @@ const SectionParcelasHome = () => {
             </div>
             <div className="conteinerUnaParcelaCarusel">
               <figure>
-                <img src={image2} alt="" />
+                <img src={carruselElEncantoDeCuracaviII} alt="" />
 
                 <div className="capa">
-                  <h3>slee dw</h3>
-                  <p>loren de dedsesedesdesdesdesdesde</p>
+                  <h2>El Encanto de Curacaví II</h2>
+                  <h3>Curacaví</h3>
                   <lu className="details">
-                    <li> 100 kilimetros </li>
-                    <li> 100 porecio </li>
-                    <li> 100 kilimetros </li>
-                    <li> 100 kilimetros </li>
+                    <li> Alta plus valia </li>
+                    <li> Luz </li>
+                    <li> Rol Propio </li>
+                    <li> Agua </li>
+                    <li> Posibilidad de crédito directo </li>
+                    <li> Entrada y Acceso controlado </li>
                   </lu>
-                  <Link to="/Parcela">
+                  <Link to="/HaciendaSantaJulia">
                     <button className="btmDetailUnaParcela">detalle</button>
                   </Link>
                 </div>
@@ -151,37 +162,20 @@ const SectionParcelasHome = () => {
             </div>
             <div className="conteinerUnaParcelaCarusel">
               <figure>
-                <img src={image1} alt="" />
+                <img src={ElEncantoDeLoreto} alt="" />
 
                 <div className="capa">
-                  <h3>slee dw</h3>
-                  <p>loren de dedsesedesdesdesdesdesde</p>
+                  <h2>El Encanto de Loreto</h2>
+                  <h3>Talagante</h3>
                   <lu className="details">
-                    <li> 100 kilimetros </li>
-                    <li> 100 porecio </li>
-                    <li> 100 kilimetros </li>
-                    <li> 100 kilimetros </li>
+                    <li> Alta plus valia </li>
+                    <li> Luz </li>
+                    <li> Rol Propio </li>
+                    <li> Agua </li>
+                    <li> Posibilidad de crédito directo </li>
+                    <li> Entrada y Acceso controlado </li>
                   </lu>
-                  <Link to="/Parcela">
-                    <button className="btmDetailUnaParcela">detalle</button>
-                  </Link>
-                </div>
-              </figure>
-            </div>
-            <div className="conteinerUnaParcelaCarusel">
-              <figure>
-                <img src={image2} alt="" />
-
-                <div className="capa">
-                  <h3>slee dw</h3>
-                  <p>loren de dedsesedesdesdesdesdesde</p>
-                  <lu className="details">
-                    <li> 100 kilimetros </li>
-                    <li> 100 porecio </li>
-                    <li> 100 kilimetros </li>
-                    <li> 100 kilimetros </li>
-                  </lu>
-                  <Link to="/Parcela">
+                  <Link to="/HaciendaSantaJulia">
                     <button className="btmDetailUnaParcela">detalle</button>
                   </Link>
                 </div>
@@ -191,11 +185,11 @@ const SectionParcelasHome = () => {
         </div>
       </div>
       <div className="conteinerFormContactHomeParcelas">
-        <h3>
+        <h2>
           Si quieres obtener mayor información sobre nuestras parcelas, déjanos
           tu correo electrónico y nuestro staff se contactará contigo a la
           brevedad posible
-        </h3>
+        </h2>
         <form className="formContactHomeParcelas">
           <input
             type="email"

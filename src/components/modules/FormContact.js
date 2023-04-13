@@ -1,5 +1,5 @@
 import image2 from "../../image/image2.jpg";
-
+import "./FormContact.css";
 const FormContact = () => {
   return (
     <div className="divConteinerContact">

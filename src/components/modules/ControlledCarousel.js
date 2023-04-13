@@ -1,56 +1,90 @@
 // import React, { useState } from "react";
-import Carousel from "react-bootstrap/Carousel";
-import imageCarouselOne from "../../image/imageCarouselOne.jpg";
-import imageCarouselTwo from "../../image/imageCarouselTwo.jpg";
+import "./ControlledCarousel.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import { Link } from "react-router-dom";
+import imageCarouselOne from "../../image/haciendaSantaJulia/haciendaSantajulia12.jpg";
+import imageCarouselTwo from "../../image/elEncantoDeLoreto/elEncantoDeLoreto1.jpg";
 
 const ControlledCarousel = () => {
-  var a = 1;
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true,
+    arrows: false,
+
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
-    <div>
-      <div className="carousel">
-        <Carousel>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={imageCarouselOne}
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item interval={1000}>
-            <img
-              className="d-block w-100"
-              src={imageCarouselTwo}
-              alt="Second slide"
-            />
-
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item interval={1000}>
-            <img
-              className="d-block w-100"
-              src={imageCarouselOne}
-              alt="Third slide"
-            />
-
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
-      </div>
+    <div className="conteinerCarruselHeader">
+      <Slider {...settings}>
+        <div className="divImgCarruselHeader">
+          <img src={imageCarouselOne} />
+          <div className="divDetailsCarruselHeader">
+            <h1>Hacienda santa Julia</h1>
+            <h4>Curacaví</h4>
+            <Link to={"/HaciendaSantaJulia"}>
+              <button className="btmCarruselHeader">detalle</button>
+            </Link>
+          </div>
+        </div>
+        <div className="divImgCarruselHeader">
+          <img src={imageCarouselTwo} />
+          <div className="divDetailsCarruselHeader">
+            <h1>Valle del Toro</h1>
+            <h4>Curacaví</h4>
+            <Link to={"/ValleDelToro"}>
+              <button className="btmCarruselHeader">detalle</button>
+            </Link>
+          </div>
+        </div>
+        <div className="divImgCarruselHeader">
+          <img src={imageCarouselOne} />
+          <div className="divDetailsCarruselHeader">
+            <h1>El Encanto de Curacaví</h1>
+            <h4>Curacaví</h4>
+            <Link to={"/ElEncantoDeCuracavi"}>
+              <button className="btmCarruselHeader">detalle</button>
+            </Link>
+          </div>
+        </div>
+        <div className="divImgCarruselHeader">
+          <img src={imageCarouselTwo} />
+          <div className="divDetailsCarruselHeader">
+            <h1>El Encanto de Curacaví II</h1>
+            <h4>Curacaví</h4>
+            <Link to={"/ElEncantoDeCuracaviII"}>
+              <button className="btmCarruselHeader">detalle</button>
+            </Link>
+          </div>
+        </div>
+        <div className="divImgCarruselHeader">
+          <img src={imageCarouselTwo} />
+          <div className="divDetailsCarruselHeader">
+            <h1>El Encanto de Loreto</h1>
+            <h4>Talagante</h4>
+            <Link to={"/Proyectos"}>
+              <button className="btmCarruselHeader">detalle</button>
+            </Link>
+          </div>
+        </div>
+      </Slider>
     </div>
   );
 };
-
 export default ControlledCarousel;

@@ -1,0 +1,45 @@
+/* ___________styles of vende tu campo____________ */
+
+.headerVendeTuCampo{
+    /* background-image: url("../image/vendetucampo.jpg") ; */
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  
+  .divTitleFormVendeTuCampo{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+  
+  .divTitleFormVendeTuCampo h1{
+    font-size: 400%;
+    text-transform: uppercase;
+  }
+  
+  .divTitleFormVendeTuCampo p{
+    font-size: xx-large;
+    margin-top: 1%;
+  }
+  
+  @media (max-width: 50.625em) {
+
+    .headerVendeTuCampo{
+ 
+      height: 450px;
+   
+      
+    }
+    
+    .divTitleFormVendeTuCampo h1{
+      font-size:50px;
+    }
+
+    .divTitleFormVendeTuCampo p{
+      font-size:30px;     
+    }
+  }

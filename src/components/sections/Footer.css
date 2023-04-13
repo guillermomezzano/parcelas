@@ -1,0 +1,89 @@
+/* ___________styles of Footer___________ */
+
+.conteinerFooterHome{
+    display: block; 
+    padding: 3%;
+    background-color:black;
+    height: 400px;
+    margin-top: 260px;
+    }
+    
+    .conteinerFooterHome img {
+        width: 8%;
+        margin-bottom: 1%;
+    }
+    
+    .conteinerFooterHome h4 {
+      margin-top: 2%;
+      color: #fff;
+    }
+    
+    .conteinerEnlacesFooterWasapInstagram{
+      display: flex;
+      justify-content: center;
+      color: #fff;
+    }
+    .conteinerEnlacesFooterWasapInstagram img{
+     height: 35px;
+     width: 35px;
+    }
+    .conteinerEnlacesFooterWasapInstagram p{
+      margin-top: 4px;
+      margin-left: 4px;
+    }
+    
+    
+    .conteinerFooter{
+      padding: 3%;
+      background-color:black;
+      }
+    
+    
+    .conteinerFooter img {
+      margin-bottom: 1%;
+     
+    }
+    
+    .conteinerFooter h4 {
+      margin-top: 2%;
+      color: #fff;
+    }
+    
+    #logoFooter{
+      width: 15%;
+    }
+
+
+@media (max-width: 50.625em) {
+
+  #logoFooter{
+    margin-bottom: 2%;
+    height: 50px;
+    width: 150px;
+  }
+
+  .conteinerFooterHome{
+      height: 300px;
+      margin-top: 550px;
+  }
+    
+  .conteinerFooterHome img{
+      height: 30%;
+      width: 30%;
+  }    
+            
+  .conteinerFooterHome h4 {
+      margin-top: 2%;
+      color: #fff;
+      font-size: medium;
+  }
+            
+  .conteinerEnlacesFooterWasapInstagram img{
+      height: 35px;
+      width: 35px;
+  }
+
+  h4{
+    font-size: medium;
+  }
+}
