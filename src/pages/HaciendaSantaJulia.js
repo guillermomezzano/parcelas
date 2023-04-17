@@ -17,10 +17,10 @@ import imageGaleria9 from "../image/haciendaSantaJulia/haciendaSantajulia9.jpg";
 //iconos
 import iconHouse from "../image/iconHouse.png";
 import camino from "../image/iconoAcceso.jpg";
-import altaPlusbalia from "../image/camino.jpg";
+import altaPlusbalia from "../image/image003.png";
 import iconEscritura from "../image/iconoEscritura.png";
-import iconoAgua from "../image/iconoAgua.jpg";
-import iconoLuz from "../image/iconoLuz.jpg";
+import iconoAgua from "../image/image002.png";
+import iconoLuz from "../image/image001.png";
 
 //styles
 import "./Parcela.css";

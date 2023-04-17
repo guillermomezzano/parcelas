@@ -15,8 +15,9 @@ import imageGaleria8 from "../image/haciendaSantaJulia/haciendaSantajulia8.jpg";
 import imageGaleria9 from "../image/haciendaSantaJulia/haciendaSantajulia9.jpg";
 
 //iconos
+
 import iconHouse from "../image/iconHouse.png";
-import camino from "../image/iconoAcceso.jpg";
+import entrada from "../image/iconoAcceso.jpg";
 import altaPlusbalia from "../image/camino.jpg";
 import iconEscritura from "../image/iconoEscritura.png";
 import iconoAgua from "../image/iconoAgua.jpg";
@@ -58,7 +59,7 @@ const ElEncantoDeCuracaviII = () => {
               <p>Rol propio</p>
             </div>
             <div>
-              <img src={camino}></img>
+              <img src={entrada}></img>
               <p>Entrada y Acceso</p>
               <p>controlado</p>
             </div>
