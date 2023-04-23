@@ -1,3 +1,8 @@
+//react
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
 //components
 import Navbar from "../components/modules/Navbar";
 import FormContactParcelas from "../components/modules/FormContactParcelas";
@@ -16,17 +21,45 @@ import imageGaleria9 from "../image/haciendaSantaJulia/haciendaSantajulia9.jpg";
 
 //iconos
 import iconHouse from "../image/iconHouse.png";
-import entrada from "../image/iconoAcceso.jpg";
-import altaPlusbalia from "../image/camino.jpg";
+import camino from "../image/iconoAcceso.jpg";
+import altaPlusbalia from "../image/image003.png";
 import iconEscritura from "../image/iconoEscritura.png";
-import iconoAgua from "../image/iconoAgua.jpg";
-import iconoLuz from "../image/iconoLuz.jpg";
+import iconoAgua from "../image/image002.png";
+import iconoLuz from "../image/image001.png";
 
 //styles
-
 import "./Parcela.css";
 
 const ElEncantoDeCuracavi = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SampleNextArrow />,
+  };
+
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: "flex",
+          alignItems: "center",
+          background: "black",
+          height: "200px",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
   return (
     <div>
       <Navbar />
@@ -58,7 +91,7 @@ const ElEncantoDeCuracavi = () => {
               <p>Rol propio</p>
             </div>
             <div>
-              <img src={entrada}></img>
+              <img src={camino}></img>
               <p>Entrada y Acceso</p>
               <p>controlado</p>
             </div>
@@ -105,6 +138,34 @@ const ElEncantoDeCuracavi = () => {
           <img src={imageGaleria7}></img>
           <img src={imageGaleria8}></img>
           <img src={imageGaleria9}></img>
+        </div>
+        <div className="conteinerCarruselHeader">
+          <Slider {...settings}>
+            <div className="divImgCarruselHeader">
+              <img src={imageGaleria1} />
+            </div>
+            <div className="divImgCarruselHeader">
+              <img src={imageGaleria2} />
+            </div>
+            <div className="divImgCarruselHeader">
+              <img src={imageGaleria3} />
+            </div>
+            <div className="divImgCarruselHeader">
+              <img src={imageGaleria4} />
+            </div>
+            <div className="divImgCarruselHeader">
+              <img src={imageGaleria6} />
+            </div>
+            <div className="divImgCarruselHeader">
+              <img src={imageGaleria7} />
+            </div>
+            <div className="divImgCarruselHeader">
+              <img src={imageGaleria8} />
+            </div>
+            <div className="divImgCarruselHeader">
+              <img src={imageGaleria9} />
+            </div>
+          </Slider>
         </div>
       </div>
       <FormContactParcelas />

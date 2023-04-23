@@ -1,0 +1,94 @@
+{
+    "parcelas":[
+        {
+            "id":"P1",
+            "nombre":"el encanto de curacaví",
+            "precio": 1400000,
+            "reserva":500000,
+            "region":"curacaví",
+            "descripcion":"",
+            "backgroundImage":"/image/elEncantoDeLoreto/elEncantoDeLoreto1.jpg",
+            "galeria":[
+                {
+                    "mensaje":"hola",
+                    "idImg":"I1",
+                    "url":"../../image/elEncantoDeCuracavi/carruselElEncantoDeCuracavi.jpg"
+                },
+                {
+                    "mensaje":"hola como",
+                    "idImg":"I2",
+                    "url":"../src/image/elEncantoDeCuracavi/carruselElEncantoDeCuracavi.jpg"
+                },
+                {
+                    "mensaje":"hola como estas",
+                    "idImg":"I3",
+                    "url":"../src/image/elEncantoDeCuracavi/carruselElEncantoDeCuracavi.jpg"
+                },
+                {
+                    "mensaje":"hola como estas",
+                    "idImg":"I4",
+                    "url":"../src/image/elEncantoDeCuracavi/carruselElEncantoDeCuracavi.jpg"
+                },
+                {
+                    "mensaje":"hola como estas",
+                    "idImg":"I5",
+                    "url":"../src/image/elEncantoDeCuracavi/carruselElEncantoDeCuracavi.jpg"
+                },
+                {
+                    "mensaje":"hola como estas",
+                    "idImg":"I6",
+                    "url":"../../image/elEncantoDeCuracavi/carruselElEncantoDeCuracavi.jpg"
+                },
+                {
+                    "mensaje":"hola como estas",
+                    "idImg":"I7",
+                    "url":"../../image/elEncantoDeCuracavi/carruselElEncantoDeCuracavi.jpg"
+                },
+                {
+                    "mensaje":"hola como estas",
+                    "idImg":"I8",
+                    "url":"../../image/elEncantoDeCuracavi/carruselElEncantoDeCuracavi.jpg"
+                },
+                {
+                    "mensaje":"hola como estas",
+                    "idImg":"I9",
+                    "url":"../../image/elEncantoDeCuracavi/carruselElEncantoDeCuracavi.jpg"
+                }
+            ]
+        },
+        {
+            "id":"P2",
+            "nombre":"el encanto de curacaví II",
+            "precio": 1400000,
+            "reserva":500000,
+            "region":"curacaví",
+            "descripcion":""
+        },   
+        {
+            "id":"P3",
+            "nombre":"el encanto de loreto",
+            "precio": 1400000,
+            "reserva":500000,
+            "region":"talagante",
+            "descripcion":""
+        },
+        {
+            "id":"P4",
+            "nombre":"valle del toro",
+            "precio": 1400000,
+            "reserva":500000,
+            "region":"curacaví",
+            "descripcion":"",
+            "backgroundImage":""
+        },
+        {
+            "id":"P5",
+            "nombre":"hacienda santa julia",
+            "precio": 1400000,
+            "reserva":500000,
+            "region":"curacaví",
+            "descripcion":""
+        }    
+    ]
+
+}

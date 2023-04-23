@@ -18,8 +18,9 @@ const Footer = () => {
             <p>cristobal.foucaut@inmobiliariaelencanto.com</p>
           </div>
           <div className="conteinerEnlacesFooterWasapInstagram">
-            <img src={logoWasap}></img>
-            <p>+569 85451260</p>
+            <a href="https://walink.co/152e16">
+              <img src={logoWasap}></img>
+            </a>
           </div>
         </div>
         <h4> 2023 Inmobiliaria El Encanto | All Right Reserved</h4>

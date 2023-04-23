@@ -1,3 +1,8 @@
+//react
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
 //components
 import Navbar from "../components/modules/Navbar";
 import FormContactParcelas from "../components/modules/FormContactParcelas";
@@ -28,6 +33,35 @@ import "./Parcela.css";
 import { Link } from "react-router-dom";
 
 const HaciendaSantaJulia = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SampleNextArrow />,
+  };
+
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: "flex",
+          alignItems: "center",
+          background: "black",
+          height: "200px",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
   return (
     <div>
       <Navbar />
@@ -106,6 +140,34 @@ const HaciendaSantaJulia = () => {
           <img src={imageGaleria7}></img>
           <img src={imageGaleria8}></img>
           <img src={imageGaleria9}></img>
+        </div>
+        <div className="conteinerCarruselHeader">
+          <Slider {...settings}>
+            <div className="divImgCarruselHeader">
+              <img src={imageGaleria1} />
+            </div>
+            <div className="divImgCarruselHeader">
+              <img src={imageGaleria2} />
+            </div>
+            <div className="divImgCarruselHeader">
+              <img src={imageGaleria3} />
+            </div>
+            <div className="divImgCarruselHeader">
+              <img src={imageGaleria4} />
+            </div>
+            <div className="divImgCarruselHeader">
+              <img src={imageGaleria6} />
+            </div>
+            <div className="divImgCarruselHeader">
+              <img src={imageGaleria7} />
+            </div>
+            <div className="divImgCarruselHeader">
+              <img src={imageGaleria8} />
+            </div>
+            <div className="divImgCarruselHeader">
+              <img src={imageGaleria9} />
+            </div>
+          </Slider>
         </div>
       </div>
       <FormContactParcelas />

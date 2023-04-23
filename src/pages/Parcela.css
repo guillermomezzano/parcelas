@@ -1,6 +1,15 @@
 /* ___________styles of Parcela___________ */
 
 /* contenerdores de la imagen de las parcelas */
+.conteinerParcela {
+  display: flex;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:800px;
+  
+}
+
 .conteinerParcelaSantajulia {
     display: flex;
     background-image: url("../image/haciendaSantaJulia/haciendaSantajulia12.jpg") ;
@@ -170,6 +179,10 @@
     
   }
 
+  .conteinerCarruselHeader{
+    display: none;
+  }
+
   @media (max-width: 1390px){
     .conteinerParcelaSantajulia ,.conteinerParcelaDelToro, .conteinerParcelaElEncanto,
     .conteinerParcelaElEncantoII, .conteinerParcelaElEncantoLoreto {
@@ -271,6 +284,14 @@
 
     .GaleryImageParcel {
       display: none;
+    }
+
+  .conteinerCarruselHeader{
+    padding: 10%;
+  }
+
+    .conteinerCarruselHeader{
+      display: block;
     }
   }
 

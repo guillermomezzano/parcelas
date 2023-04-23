@@ -1,23 +1,22 @@
 //react
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+// import { useParams, Link, useNavigate } from "react-router-dom";
 
 //components
 import Navbar from "../components/modules/Navbar";
 import FormContactParcelas from "../components/modules/FormContactParcelas";
 import Footer from "../components/sections/Footer";
+import CarruselGaleria from "../components/modules/CarruselGaleria";
 
 // imagenes de la galeria
-import imageGaleria1 from "../image/valleDelToro/a.jpg";
-import imageGaleria2 from "../image/haciendaSantaJulia/haciendaSantajulia9.jpg";
-import imageGaleria3 from "../image/haciendaSantaJulia/haciendaSantajulia3.jpg";
-import imageGaleria4 from "../image/haciendaSantaJulia/haciendaSantajulia4.jpg";
-import imageGaleria5 from "../image/haciendaSantaJulia/haciendaSantajulia5.jpg";
-import imageGaleria6 from "../image/haciendaSantaJulia/haciendaSantajulia6.jpg";
-import imageGaleria7 from "../image/haciendaSantaJulia/haciendaSantajulia7.jpg";
-import imageGaleria8 from "../image/haciendaSantaJulia/haciendaSantajulia8.jpg";
-import imageGaleria9 from "../image/haciendaSantaJulia/haciendaSantajulia9.jpg";
+import imageGaleria1 from "../image/elEncantoDeLoreto/elEncantoDeLoreto1.jpg";
+import imageGaleria2 from "../image/elEncantoDeLoreto/elEncantoDeLoreto2.jpg";
+import imageGaleria3 from "../image/elEncantoDeLoreto/elEncantoDeLoreto3.JPG";
+import imageGaleria4 from "../image/elEncantoDeLoreto/elEncantoDeLoreto4.JPG";
+import imageGaleria5 from "../image/elEncantoDeLoreto/elEncantoDeLoreto5.JPG";
+import imageGaleria6 from "../image/elEncantoDeLoreto/elEncantoDeLoreto6.JPG";
+import imageGaleria7 from "../image/elEncantoDeLoreto/elEncantoDeLoreto7.JPG";
+import imageGaleria8 from "../image/elEncantoDeLoreto/elEncantoDeLoreto8.JPG";
+import imageGaleria9 from "../image/elEncantoDeLoreto/elEncantoDeLoreto9.jpg";
 
 //iconos
 import iconHouse from "../image/iconHouse.png";
@@ -26,57 +25,61 @@ import altaPlusbalia from "../image/image003.png";
 import iconEscritura from "../image/iconoEscritura.png";
 import iconoAgua from "../image/image002.png";
 import iconoLuz from "../image/image001.png";
-//styles
 
+//styles
 import "./Parcela.css";
 
-const ValleDelToro = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: true,
+//data
+import data from "../parcelas.json";
 
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SampleNextArrow />,
-  };
+const Parcela = (props) => {
+  const { idParcela } = props;
+  const parcela = data.parcelas.find((unparcela) => unparcela.id === idParcela);
+  // const parcelaParce = JSON.parse(parcela);
+  // console.log(parcelaParce);
 
-  function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{
-          ...style,
-          display: "flex",
-          alignItems: "center",
-          background: "black",
-          height: "200px",
-        }}
-        onClick={onClick}
-      />
-    );
+  switch (parcela.id) {
+    case "P1":
+      var conteinerParcela = "conteinerParcelaElEncanto";
+      break;
+    case "P2":
+      var conteinerParcela = "conteinerParcelaElEncantoII";
+      break;
+    case "P3":
+      var conteinerParcela = "cconteinerParcelaElEncantoLoreto";
+      break;
+    case "P4":
+      var conteinerParcela = "conteinerParcelaDelToro";
+      break;
+    case "P5":
+      var conteinerParcela = "conteinerParcelaSantajulia";
+      break;
+
+    default:
+      break;
   }
+
+  console.log("este es el parcela", parcela);
   return (
     <div>
       <Navbar />
-      <div className="conteinerParcelaDelToro">
+      <div
+        className={conteinerParcela}
+        // style={{ backgroundImage: parcela.backgroundImage }}
+      >
         <div className="conteinerParcelaPrecio">
           <p>precios desde</p>
           <div>
-            <p>$ 14.990.000</p>
+            <p>$ {parcela.precio}</p>
           </div>
-          <p>reserva: $ 400.000</p>
+          <p>reserva: $ {parcela.reserva}</p>
         </div>
 
         <div>
           <div className="conteinerParcelaTitle">
-            <h1>valle del toro</h1>
+            <h1>{parcela.nombre}</h1>
             <hr></hr>
-            <h4>CURACAVÍ</h4>
+            <h4>{parcela.region}</h4>
             <p>
               Parcelas agro-residenciales de 5000 mts cuadrados en planicie,
               cuentan con entrada y acceso controlado, Rol propio, luz con su
@@ -139,34 +142,7 @@ const ValleDelToro = () => {
           <img src={imageGaleria8}></img>
           <img src={imageGaleria9}></img>
         </div>
-        <div className="conteinerCarruselHeader">
-          <Slider {...settings}>
-            <div className="divImgCarruselHeader">
-              <img src={imageGaleria1} />
-            </div>
-            <div className="divImgCarruselHeader">
-              <img src={imageGaleria2} />
-            </div>
-            <div className="divImgCarruselHeader">
-              <img src={imageGaleria3} />
-            </div>
-            <div className="divImgCarruselHeader">
-              <img src={imageGaleria4} />
-            </div>
-            <div className="divImgCarruselHeader">
-              <img src={imageGaleria6} />
-            </div>
-            <div className="divImgCarruselHeader">
-              <img src={imageGaleria7} />
-            </div>
-            <div className="divImgCarruselHeader">
-              <img src={imageGaleria8} />
-            </div>
-            <div className="divImgCarruselHeader">
-              <img src={imageGaleria9} />
-            </div>
-          </Slider>
-        </div>
+        <CarruselGaleria className="CarruselGaleria" parcela={parcela} />
       </div>
       <FormContactParcelas />
       <Footer />
@@ -174,4 +150,4 @@ const ValleDelToro = () => {
   );
 };
 
-export default ValleDelToro;
+export default Parcela;
