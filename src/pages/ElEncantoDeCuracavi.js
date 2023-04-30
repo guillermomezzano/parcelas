@@ -139,32 +139,16 @@ const ElEncantoDeCuracavi = () => {
           <img src={imageGaleria8}></img>
           <img src={imageGaleria9}></img>
         </div>
-        <div className="conteinerCarruselHeader">
+        <div className="conteinerCarruselGaleryImage">
           <Slider {...settings}>
-            <div className="divImgCarruselHeader">
-              <img src={imageGaleria1} />
-            </div>
-            <div className="divImgCarruselHeader">
-              <img src={imageGaleria2} />
-            </div>
-            <div className="divImgCarruselHeader">
-              <img src={imageGaleria3} />
-            </div>
-            <div className="divImgCarruselHeader">
-              <img src={imageGaleria4} />
-            </div>
-            <div className="divImgCarruselHeader">
-              <img src={imageGaleria6} />
-            </div>
-            <div className="divImgCarruselHeader">
-              <img src={imageGaleria7} />
-            </div>
-            <div className="divImgCarruselHeader">
-              <img src={imageGaleria8} />
-            </div>
-            <div className="divImgCarruselHeader">
-              <img src={imageGaleria9} />
-            </div>
+            <img src={imageGaleria1} />
+            <img src={imageGaleria2} />
+            <img src={imageGaleria3} />
+            <img src={imageGaleria4} />
+            <img src={imageGaleria6} />
+            <img src={imageGaleria7} />
+            <img src={imageGaleria8} />
+            <img src={imageGaleria9} />
           </Slider>
         </div>
       </div>

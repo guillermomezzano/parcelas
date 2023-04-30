@@ -179,7 +179,7 @@
     
   }
 
-  .conteinerCarruselHeader{
+  .conteinerCarruselGaleryImage{
     display: none;
   }
 
@@ -286,12 +286,16 @@
       display: none;
     }
 
-  .conteinerCarruselHeader{
-    padding: 10%;
-  }
 
-    .conteinerCarruselHeader{
+
+    .conteinerCarruselGaleryImage{
+      padding: 10%;
       display: block;
+    }
+
+    .conteinerCarruselGaleryImage img{
+      height: 500px;
+     padding: 5%;
     }
   }
 

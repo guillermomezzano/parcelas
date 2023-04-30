@@ -1,10 +1,37 @@
+// componentes
 import Navbar from "../components/modules/Navbar";
 import Footer from "../components/sections/Footer";
+//styles
 import imageGaleria from "../image/imageVendeLoteo.jpg";
+//react
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 import "./QuienesSomos.css";
 
 const QuinesSomos = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_djuqe9l",
+        "template_8rz9uwx",
+        form.current,
+        "wk5uuQuewgYYXvZRi"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div>
       <Navbar />
@@ -74,21 +101,49 @@ const QuinesSomos = () => {
           </p>
         </div>
       </div>
-      <form className="formContactQuienesSomos">
+      <form className="formContactQuienesSomos" ref={form} onSubmit={sendEmail}>
         <h1>Contáctanos</h1>
         <div className="conteinerInputFormContactQuienesSomos">
-          <input type="text" required placeholder="Nombre"></input>
-          <input type="text" required placeholder="Apellido"></input>
+          <input
+            type="text"
+            name="user_name"
+            required
+            placeholder="Nombre"
+          ></input>
+          <input
+            type="text"
+            name="user_last_name"
+            required
+            placeholder="Apellido"
+          ></input>
           <input
             type="email"
+            name="user_email"
             required
             placeholder="Email"
             pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
           ></input>
-          <input type="tel" required placeholder="Telefono"></input>
+          <input
+            type="tel"
+            name="user_phone"
+            required
+            placeholder="Telefono"
+          ></input>
         </div>
-        <textarea rows="7" cols="50" required placeholder="Mensaje"></textarea>
-        <button className="btnFormContactQuienesSomos">agendar</button>
+        <textarea
+          rows="7"
+          cols="50"
+          name="message"
+          required
+          placeholder="Mensaje"
+        ></textarea>
+        <button
+          className="btnFormContactQuienesSomos"
+          type="submit"
+          value="Send"
+        >
+          agendar
+        </button>
       </form>
       <Footer />
     </div>

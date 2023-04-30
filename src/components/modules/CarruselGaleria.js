@@ -53,13 +53,13 @@ const CarruselGaleria = (props) => {
       <div className="divConteinerParcelasCarusel">
         hola
         <Slider {...settings}>
-          {objetctGaleria.map((objetctGaleria, index) => {
+          {objetctGaleria.map((unObjetctGaleria, index) => {
             // let imagenGaleria = objetctGaleria.url;
             // console.log("objetctGaleria.url", objetctGaleria.url);
             // console.log("imagenGaleria", imagenGaleria);
             return (
               <div key={index}>
-                <img src={objetctGaleria.url}></img>
+                <img src={unObjetctGaleria.url}></img>
               </div>
             );
           })}

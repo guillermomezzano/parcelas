@@ -1,6 +1,13 @@
-import "./SectionParcelasHome.css";
+// react
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
+//style
+import "./SectionParcelasHome.css";
+
+//image
 import HaciendaSantaJulia from "../../image/haciendaSantaJulia/haciendaSantajulia6.jpg";
 import ElEncantoDeLoreto from "../../image/elEncantoDeLoreto/elEncantoDeLoreto10.jpg";
 import carruselElEncantoDeCuracavi from "../../image/elEncantoDeCuracavi/carruselElEncantoDeCuracavi.jpg";
@@ -8,6 +15,28 @@ import ValleDelToro from "../../image/valleDelToro/b.jpg";
 import carruselElEncantoDeCuracaviII from "../../image/haciendaSantaJulia/haciendaSantajulia8.jpg";
 
 const SectionParcelasHome = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_fjtr6w4",
+        "template_gmjmkuh",
+        form.current,
+        "8YfPRB5MsBJzU_EYt"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -190,14 +219,21 @@ const SectionParcelasHome = () => {
           tu correo electrónico y nuestro staff se contactará contigo a la
           brevedad posible
         </h2>
-        <form className="formContactHomeParcelas">
+        <form
+          className="formContactHomeParcelas"
+          ref={form}
+          onSubmit={sendEmail}
+        >
           <input
             type="email"
             required
+            name="user_email"
             placeholder="Email"
             pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
           ></input>
-          <button className="btnContactHome">deseo mayor información</button>
+          <button className="btnContactHome" type="submit" value="Send">
+            deseo mayor información
+          </button>
         </form>
       </div>
     </div>

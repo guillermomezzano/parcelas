@@ -24,24 +24,30 @@
 
   
   /* estilos para el navbar */
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+  .navbars {
     background-color: hsl(0, 0%, 0%);
-    padding: 0px 200px 0px 200px;
     height: 130px;
     font-size: larger;
     text-transform: uppercase;
+    
    
   }
+  .enlaces{
+    margin-left: 6%;
+    
+  }
+.conteinerNavbar{
+  margin-left: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   
-  .logo img{
-  width: 100%;
+}
+  .logo {
+  width: 80%;
   }
   
-  
+
   nav ul {
     display: flex;
     align-items: center;
@@ -144,8 +150,8 @@
     padding: 0px 80px 0px 80px; 
   }
   
-  .logo img{
-    width: 80%;
+  .logo {
+    width: 60%;
     }
   
     nav{
@@ -217,8 +223,8 @@
       padding: 0px;
     }
   
-    .logo img{
-      width: 80%;
+    .logo {
+      width: 50%;
       }
     
       nav{
@@ -233,6 +239,19 @@
     .topBar{
         display: none;
       }
+
+      .navbars {
+
+        height: auto;
+
+        
+       
+      }
+
+      .conteinerNavbar{
+        margin-right: 4%;
+      }
+
       nav ul li {
         margin-top: 1px;
         margin-bottom: 1px;

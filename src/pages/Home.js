@@ -1,5 +1,4 @@
 import Footer from "../components/sections/Footer";
-
 import Header from "../components/sections/Header";
 import BodyHome from "../components/sections/BodyHome";
 

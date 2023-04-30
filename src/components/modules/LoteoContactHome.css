@@ -61,7 +61,7 @@
   }
 
 
-  .btmSailLoteoContact{
+  .btmSailLoteoContact {
     font-size: x-large;
     color:white;
     text-transform: uppercase;
@@ -71,9 +71,16 @@
     width: 50%;
     height: 70px;
     margin: 2%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
   
   }
   
+
+
   .btmSailLoteoContact:hover{
     background-color:rgb(53, 52, 52);;
     transition: .5s;

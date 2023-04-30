@@ -1,5 +1,6 @@
-import TextField from "@mui/material/TextField";
 import mapaLoteo from "../../image/mapaLoteo.jpg";
+import { Link } from "react-router-dom";
+
 import "./LoteoContactHome.css";
 const LoteoContactHome = () => {
   return (
@@ -18,7 +19,9 @@ const LoteoContactHome = () => {
               </p>
             </div>
           </div>
-          <button className="btmSailLoteoContact">contáctanos</button>
+          <Link to="/Contacto" className="btmSailLoteoContact">
+            contáctanos
+          </Link>
         </div>
       </div>
       <div className="divWitheHomeVendeTuLoteo"></div>

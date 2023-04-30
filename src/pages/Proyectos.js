@@ -35,7 +35,7 @@ const Proyectos = () => {
                 <li> Posibilidad de crédito directo </li>
                 <li> Entrada y Acceso controlado </li>
               </lu>
-              <Link to="/Parcela">
+              <Link to="/HaciendaSantaJulia">
                 <button className="btmDetailUnaParcela">detalle</button>
               </Link>
             </div>
@@ -56,7 +56,7 @@ const Proyectos = () => {
                 <li> Posibilidad de crédito directo </li>
                 <li> Entrada y Acceso controlado </li>
               </lu>
-              <Link to="/Parcela">
+              <Link to="/ValleDelToro">
                 <button className="btmDetailUnaParcela">detalle</button>
               </Link>
             </div>
@@ -77,7 +77,7 @@ const Proyectos = () => {
                 <li> Posibilidad de crédito directo </li>
                 <li> Entrada y Acceso controlado </li>
               </lu>
-              <Link to="/Parcela">
+              <Link to="/ElEncantoDeCuracavi">
                 <button className="btmDetailUnaParcela">detalle</button>
               </Link>
             </div>
@@ -98,7 +98,7 @@ const Proyectos = () => {
                 <li> Posibilidad de crédito directo </li>
                 <li> Entrada y Acceso controlado </li>
               </lu>
-              <Link to="/Parcela">
+              <Link to="/ElEncantoDeCuracaviII">
                 <button className="btmDetailUnaParcela">detalle</button>
               </Link>
             </div>
@@ -119,7 +119,7 @@ const Proyectos = () => {
                 <li> Posibilidad de crédito directo </li>
                 <li> Entrada y Acceso controlado </li>
               </lu>
-              <Link to="/Parcela">
+              <Link to="/ElEncantoDeLoreto">
                 <button className="btmDetailUnaParcela">detalle</button>
               </Link>
             </div>
