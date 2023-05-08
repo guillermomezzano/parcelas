@@ -7,12 +7,12 @@
             "reserva":500000,
             "region":"curacaví",
             "descripcion":"",
-            "backgroundImage":"/image/elEncantoDeLoreto/elEncantoDeLoreto1.jpg",
+            "backgroundImage":"../image/elEncantoDeLoreto/elEncantoDeLoreto1.jpg",
             "galeria":[
                 {
                     "mensaje":"hola",
                     "idImg":"I1",
-                    "url":"../../image/elEncantoDeCuracavi/carruselElEncantoDeCuracavi.jpg"
+                    "url":"../image/elEncantoDeCuracavi/carruselElEncantoDeCuracavi.jpg"
                 },
                 {
                     "mensaje":"hola como",

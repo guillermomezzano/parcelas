@@ -1,5 +1,5 @@
 //react
-// import { useParams, Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 //components
 import Navbar from "../components/modules/Navbar";
@@ -31,43 +31,54 @@ import "./Parcela.css";
 
 //data
 import data from "../parcelas.json";
+import { red } from "@mui/material/colors";
 
 const Parcela = (props) => {
+  const a = "../image/elEncantoDeLoreto/elEncantoDeLoreto1.jpg";
+  const [fondo, setFondo] = useState();
   const { idParcela } = props;
   const parcela = data.parcelas.find((unparcela) => unparcela.id === idParcela);
-  // const parcelaParce = JSON.parse(parcela);
-  // console.log(parcelaParce);
 
-  switch (parcela.id) {
-    case "P1":
-      var conteinerParcela = "conteinerParcelaElEncanto";
-      break;
-    case "P2":
-      var conteinerParcela = "conteinerParcelaElEncantoII";
-      break;
-    case "P3":
-      var conteinerParcela = "cconteinerParcelaElEncantoLoreto";
-      break;
-    case "P4":
-      var conteinerParcela = "conteinerParcelaDelToro";
-      break;
-    case "P5":
-      var conteinerParcela = "conteinerParcelaSantajulia";
-      break;
+  useEffect(() => {
+    setFondo(parcela.backgroundImage);
+  }, []);
 
-    default:
-      break;
-  }
+  useEffect(() => {
+    console.log("fondo", fondo);
+  }, [fondo]);
 
-  console.log("este es el parcela", parcela);
+  // setFondo(backgroundImage);
+  // const parcelaParce = ;
+
+  // switch (parcela.id) {
+  //   case "P1":
+  //     var conteinerParcela = "conteinerParcelaElEncanto";
+  //     break;
+  //   case "P2":
+  //     var conteinerParcela = "conteinerParcelaElEncantoII";
+  //     break;
+  //   case "P3":
+  //     var conteinerParcela = "cconteinerParcelaElEncantoLoreto";
+  //     break;
+  //   case "P4":
+  //     var conteinerParcela = "conteinerParcelaDelToro";
+  //     break;
+  //   case "P5":
+  //     var conteinerParcela = "conteinerParcelaSantajulia";
+  //     break;
+
+  //   default:
+  //     break;
+  // }
+
   return (
     <div>
       <Navbar />
-      <div
-        className={conteinerParcela}
-        // style={{ backgroundImage: parcela.backgroundImage }}
-      >
-        <div className="conteinerParcelaPrecio">
+      <div className="conteinerParcela">
+        <div
+          className="conteinerParcelaPrecio"
+          style={{ backgroundImage: `url(${a})` }}
+        >
           <p>precios desde</p>
           <div>
             <p>$ {parcela.precio}</p>
@@ -132,17 +143,9 @@ const Parcela = (props) => {
           </div>
         </div>
         <div className="GaleryImageParcel">
-          <img src={imageGaleria1}></img>
-          <img src={imageGaleria2}></img>
-          <img src={imageGaleria3}></img>
-          <img src={imageGaleria4}></img>
-          <img src={imageGaleria5}></img>
-          <img src={imageGaleria6}></img>
-          <img src={imageGaleria7}></img>
-          <img src={imageGaleria8}></img>
-          <img src={imageGaleria9}></img>
+          <img src={fondo}></img>
         </div>
-        <CarruselGaleria className="CarruselGaleria" parcela={parcela} />
+        {/* <CarruselGaleria className="CarruselGaleria" parcela={parcela} /> */}
       </div>
       <FormContactParcelas />
       <Footer />
