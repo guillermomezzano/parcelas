@@ -62,7 +62,8 @@
             "precio": 1400000,
             "reserva":500000,
             "region":"curacaví",
-            "descripcion":""
+            "descripcion":"",
+            "backgroundImage":"../image/elEncantoDeLoreto/elEncantoDeLoreto4.JPG"
         },   
         {
             "id":"P3",

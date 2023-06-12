@@ -1,10 +1,10 @@
-import HaciendaSantaJulia from "../image/haciendaSantaJulia/haciendaSantajulia6.jpg";
-import ElEncantoDeLoreto from "../image/elEncantoDeLoreto/elEncantoDeLoreto10.jpg";
+import HaciendaSantaJulia from "../image/haciendaSantaJulia/6.jpg";
+import ElEncantoDeLoreto from "../image/elEncantoDeLoreto/10.jpg";
 import carruselElEncantoDeCuracavi from "../image/elEncantoDeCuracavi/carruselElEncantoDeCuracavi.jpg";
-import ValleDelToro from "../image/valleDelToro/b.jpg";
-import carruselElEncantoDeCuracaviII from "../image/haciendaSantaJulia/haciendaSantajulia8.jpg";
+import ValleDelToro from "../image/valleDelToro/12.jpg";
+import carruselElEncantoDeCuracaviII from "../image/haciendaSantaJulia/8.jpg";
 import Footer from "../components/sections/Footer";
-import Navbar from "../components/modules/Navbar";
+import Navbar from "../components/sections/Navbar";
 import { Link } from "react-router-dom";
 import "./Proyectos.css";
 

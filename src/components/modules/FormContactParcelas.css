@@ -58,9 +58,10 @@
     color:white;
     text-transform: uppercase;
     border-style: none;
-    background-color: black;
+    background-color: rgb(6, 6, 6);
     border-radius: 6px;
     transition: 1s;
+    
   }
   
   .btnFonteinerFormContactFooter:hover{

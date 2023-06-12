@@ -2,6 +2,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 .conteinerCarruselHeader {
     width: 100%; 
   
@@ -29,13 +38,13 @@
   
   .divDetailsCarruselHeader h1{
     font-size:60px;
-  }
-/* 
+  } 
+
   .btmCarruselHeader:hover{
     color: black;
     background-color: white; 
     transition: 1s;
-  } */
+  }
   .btmCarruselHeader{
     font-size: xx-large;
     margin-top: 3%;
@@ -46,7 +55,6 @@
     border-radius: 6px;
     border-style: none;
     background-color: black; 
-    /* transition: 1s; */
   }
 
   .btmCarruselHeader:hover{
@@ -74,4 +82,10 @@
       height: 70px;
     }
 
+  }
+
+  @media screen and (max-width: 700px) {
+    .container-slider{
+      margin: 100px 10px 0;
+    }
   }

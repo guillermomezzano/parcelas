@@ -1,13 +1,16 @@
-import NabVar from "../modules/Navbar";
+import NabVar from "./Navbar";
 import ControlledCarousel from "../modules/ControlledCarousel";
+import imageCarouselOne from "../../image/haciendaSantaJulia/11.jpg";
+import imageCarouselTwo from "../../image/elEncantoDeLoreto/1.jpg";
 
 const Header = () => {
+  const images = [imageCarouselOne, imageCarouselTwo];
   return (
     <div>
       <NabVar />
 
       {/* <div className="divConteinerHader"> */}
-      <ControlledCarousel />
+      <ControlledCarousel images={images} />
       {/* <form className="conteinerFormContact">
           <h1>Contáctanos</h1>
           <div className="divInputNombreApellidoFormContact">

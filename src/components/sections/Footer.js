@@ -1,4 +1,4 @@
-import logoSticky from "../../image/logo.png";
+import logoSticky from "../../image/logoFoter.png";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailIcon from "@mui/icons-material/Email";
 import logoWasap from "../../image/logoWasap.png";
@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div>
       <div className="conteinerFooter">
-        <img id="logoFooter" src={logoSticky}></img>
+        <img id="logoFooter" src={logoSticky} alt="" />
         <div>
           <a href="#">
             <InstagramIcon fontSize="large" sx={{ color: "white" }} />
@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
           <div className="conteinerEnlacesFooterWasapInstagram">
             <a href="https://walink.co/152e16">
-              <img src={logoWasap}></img>
+              <img src={logoWasap} alt=""></img>
             </a>
           </div>
         </div>

@@ -1,25 +1,28 @@
 // react
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import emailjs from "@emailjs/browser";
+
+import GlobalContext from "../../context/global-context";
 
 //style
 import "./SectionParcelasHome.css";
 
 //image
-import HaciendaSantaJulia from "../../image/haciendaSantaJulia/haciendaSantajulia6.jpg";
-import ElEncantoDeLoreto from "../../image/elEncantoDeLoreto/elEncantoDeLoreto10.jpg";
-import carruselElEncantoDeCuracavi from "../../image/elEncantoDeCuracavi/carruselElEncantoDeCuracavi.jpg";
-import ValleDelToro from "../../image/valleDelToro/b.jpg";
-import carruselElEncantoDeCuracaviII from "../../image/haciendaSantaJulia/haciendaSantajulia8.jpg";
+import HaciendaSantaJulia from "../../image/haciendaSantaJulia/6.jpg";
+import ElEncantoDeLoreto from "../../image/elEncantoDeLoreto/17.jpg";
+import carruselElEncantoDeCuracavi from "../../image/elEncantoDeCuracavi/10.jpeg";
+import ValleDelToro from "../../image/valleDelToro/12.jpg";
+import carruselElEncantoDeCuracaviII from "../../image/elEncantoDeCuracaviII/10.jpeg";
 
 const SectionParcelasHome = () => {
+  const { ui } = useContext(GlobalContext);
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    ui.setLoading(true);
     emailjs
       .sendForm(
         "service_fjtr6w4",
@@ -29,9 +32,20 @@ const SectionParcelasHome = () => {
       )
       .then(
         (result) => {
+          ui.setLoading(false);
+          ui.setSnackbar({
+            message:
+              "correo enviado satisfactoriamente nuestros ejecutivos se contactaran a la brevedad",
+            severity: "success",
+          });
           console.log(result.text);
         },
         (error) => {
+          ui.setLoading(false);
+          ui.setSnackbar({
+            message: "error al momento de enviar el correo",
+            severity: "error",
+          });
           console.log(error.text);
         }
       );

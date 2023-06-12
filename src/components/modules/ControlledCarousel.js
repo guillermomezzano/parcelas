@@ -1,12 +1,13 @@
 // import React, { useState } from "react";
+
 import "./ControlledCarousel.css";
-// import "bootstrap/dist/css/bootstrap.min.css";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import imageCarouselOne from "../../image/haciendaSantaJulia/haciendaSantajulia12.jpg";
-import imageCarouselTwo from "../../image/elEncantoDeLoreto/elEncantoDeLoreto1.jpg";
+import imageCarouselOne from "../../image/haciendaSantaJulia/2.jpg";
+import imageCarouselTwo from "../../image/elEncantoDeLoreto/1.jpg";
 
 const ControlledCarousel = () => {
   const settings = {
@@ -34,7 +35,7 @@ const ControlledCarousel = () => {
     <div className="conteinerCarruselHeader">
       <Slider {...settings}>
         <div className="divImgCarruselHeader">
-          <img src={imageCarouselOne} />
+          <img src={imageCarouselOne} alt="" />
           <div className="divDetailsCarruselHeader">
             <h1>Hacienda santa Julia</h1>
             <h4>Curacaví</h4>
@@ -44,17 +45,21 @@ const ControlledCarousel = () => {
           </div>
         </div>
         <div className="divImgCarruselHeader">
-          <img src={imageCarouselTwo} />
+          <img src={imageCarouselTwo} alt="" />
           <div className="divDetailsCarruselHeader">
             <h1>Valle del Toro</h1>
             <h4>Curacaví</h4>
             <Link to={"/ValleDelToro"}>
+              <br />
+              <br />
+              <br />
+              <br />
               <button className="btmCarruselHeader">detalle</button>
             </Link>
           </div>
         </div>
         <div className="divImgCarruselHeader">
-          <img src={imageCarouselOne} />
+          <img src={imageCarouselOne} alt="" />
           <div className="divDetailsCarruselHeader">
             <h1>El Encanto de Curacaví</h1>
             <h4>Curacaví</h4>
@@ -64,7 +69,7 @@ const ControlledCarousel = () => {
           </div>
         </div>
         <div className="divImgCarruselHeader">
-          <img src={imageCarouselTwo} />
+          <img src={imageCarouselTwo} alt="" />
           <div className="divDetailsCarruselHeader">
             <h1>El Encanto de Curacaví II</h1>
             <h4>Curacaví</h4>
@@ -74,7 +79,7 @@ const ControlledCarousel = () => {
           </div>
         </div>
         <div className="divImgCarruselHeader">
-          <img src={imageCarouselTwo} />
+          <img src={imageCarouselTwo} alt="" />
           <div className="divDetailsCarruselHeader">
             <h1>El Encanto de Loreto</h1>
             <h4>Talagante</h4>
@@ -88,3 +93,32 @@ const ControlledCarousel = () => {
   );
 };
 export default ControlledCarousel;
+
+// import React, { useState } from "react";
+
+// const ControlledCarousel = (images) => {
+//   debugger;
+//   const [currentIndex, setCurrentIndex] = useState(0);
+
+//   const previousSlide = () => {
+//     setCurrentIndex((prevIndex) =>
+//       prevIndex === 0 ? images.length - 1 : prevIndex - 1
+//     );
+//   };
+
+//   const nextSlide = () => {
+//     setCurrentIndex((prevIndex) =>
+//       prevIndex === images.length - 1 ? 0 : prevIndex + 1
+//     );
+//   };
+
+//   return (
+//     <div className="carousel">
+//       <button onClick={previousSlide}>&lt;</button>
+//       <img src={images[currentIndex]} alt="Slide" />
+//       <button onClick={nextSlide}>&gt;</button>
+//     </div>
+//   );
+// };
+
+// export default ControlledCarousel;

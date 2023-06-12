@@ -1,84 +1,70 @@
 //react
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 //components
-import Navbar from "../components/modules/Navbar";
+import Navbar from "../components/sections/Navbar";
 import FormContactParcelas from "../components/modules/FormContactParcelas";
 import Footer from "../components/sections/Footer";
-import CarruselGaleria from "../components/modules/CarruselGaleria";
+// import CarruselGaleria from "../components/modules/CarruselGaleria";
 
 // imagenes de la galeria
-import imageGaleria1 from "../image/elEncantoDeLoreto/elEncantoDeLoreto1.jpg";
-import imageGaleria2 from "../image/elEncantoDeLoreto/elEncantoDeLoreto2.jpg";
-import imageGaleria3 from "../image/elEncantoDeLoreto/elEncantoDeLoreto3.JPG";
-import imageGaleria4 from "../image/elEncantoDeLoreto/elEncantoDeLoreto4.JPG";
-import imageGaleria5 from "../image/elEncantoDeLoreto/elEncantoDeLoreto5.JPG";
-import imageGaleria6 from "../image/elEncantoDeLoreto/elEncantoDeLoreto6.JPG";
-import imageGaleria7 from "../image/elEncantoDeLoreto/elEncantoDeLoreto7.JPG";
-import imageGaleria8 from "../image/elEncantoDeLoreto/elEncantoDeLoreto8.JPG";
-import imageGaleria9 from "../image/elEncantoDeLoreto/elEncantoDeLoreto9.jpg";
+import imageGaleria9 from "../image/elEncantoDeLoreto/9.jpg";
 
 //iconos
-import iconHouse from "../image/iconHouse.png";
-import camino from "../image/iconoAcceso.jpg";
-import altaPlusbalia from "../image/image003.png";
-import iconEscritura from "../image/iconoEscritura.png";
-import iconoAgua from "../image/image002.png";
-import iconoLuz from "../image/image001.png";
-
+import iconoHouse from "../image/iconos/iconoHouse.png";
+import iconoAcceso from "../image/iconos/iconoAcceso.jpg";
+import iconoAltaPlusbalia from "../image/iconos/iconoAltaPlusbalia.png";
+import iconoEscritura from "../image/iconos/iconoEscritura.png";
+import iconoAgua from "../image/iconos/iconoAgua.png";
+import iconoLuz from "../image/iconos/iconoLuz.png";
 //styles
 import "./Parcela.css";
 
 //data
 import data from "../parcelas.json";
-import { red } from "@mui/material/colors";
 
 const Parcela = (props) => {
-  const a = "../image/elEncantoDeLoreto/elEncantoDeLoreto1.jpg";
-  const [fondo, setFondo] = useState();
   const { idParcela } = props;
   const parcela = data.parcelas.find((unparcela) => unparcela.id === idParcela);
+  // const parcelaObject = JSON.stringify(parcela);
 
   useEffect(() => {
-    setFondo(parcela.backgroundImage);
-  }, []);
+    console.log("parcela", parcela);
+  }, [parcela]);
 
-  useEffect(() => {
-    console.log("fondo", fondo);
-  }, [fondo]);
+  // useEffect(() => {
+  //   setFondo(JSON.stringify(parcela.backgroundImage));
+  // }, []);
 
   // setFondo(backgroundImage);
   // const parcelaParce = ;
 
-  // switch (parcela.id) {
-  //   case "P1":
-  //     var conteinerParcela = "conteinerParcelaElEncanto";
-  //     break;
-  //   case "P2":
-  //     var conteinerParcela = "conteinerParcelaElEncantoII";
-  //     break;
-  //   case "P3":
-  //     var conteinerParcela = "cconteinerParcelaElEncantoLoreto";
-  //     break;
-  //   case "P4":
-  //     var conteinerParcela = "conteinerParcelaDelToro";
-  //     break;
-  //   case "P5":
-  //     var conteinerParcela = "conteinerParcelaSantajulia";
-  //     break;
+  switch (parcela.id) {
+    case "P1":
+      var conteinerParcela = "conteinerParcelaElEncanto";
+      break;
+    case "P2":
+      conteinerParcela = "conteinerParcelaElEncantoII";
+      break;
+    case "P3":
+      conteinerParcela = "cconteinerParcelaElEncantoLoreto";
+      break;
+    case "P4":
+      conteinerParcela = "conteinerParcelaDelToro";
+      break;
+    case "P5":
+      conteinerParcela = "conteinerParcelaSantajulia";
+      break;
 
-  //   default:
-  //     break;
-  // }
+    default:
+      break;
+  }
 
   return (
     <div>
       <Navbar />
-      <div className="conteinerParcela">
-        <div
-          className="conteinerParcelaPrecio"
-          style={{ backgroundImage: `url(${a})` }}
-        >
+      <div className={conteinerParcela}>
+        <div className="conteinerParcelaPrecio">
           <p>precios desde</p>
           <div>
             <p>$ {parcela.precio}</p>
@@ -101,29 +87,29 @@ const Parcela = (props) => {
           </div>
           <div className="conteinerParcelaInfo">
             <div>
-              <img src={iconHouse}></img>
+              <img src={iconoHouse} alt=""></img>
               <p>Rol propio</p>
             </div>
             <div>
-              <img src={camino}></img>
+              <img src={iconoAcceso} alt=""></img>
               <p>Entrada y Acceso</p>
               <p>controlado</p>
             </div>
             <div>
-              <img src={iconoLuz}></img>
+              <img src={iconoLuz} alt=""></img>
               <p>Luz</p>
             </div>
             <div>
-              <img src={iconoAgua}></img>
+              <img src={iconoAgua} alt=""></img>
               <p>Agua</p>
             </div>
             <div>
-              <img src={iconEscritura}></img>
+              <img src={iconoEscritura} alt=""></img>
               <p>Posibilidad de </p>
               <p>crédito directo</p>
             </div>
             <div>
-              <img src={altaPlusbalia}></img>
+              <img src={iconoAltaPlusbalia} alt=""></img>
               <p>Alta plus valia</p>
             </div>
           </div>
@@ -143,7 +129,12 @@ const Parcela = (props) => {
           </div>
         </div>
         <div className="GaleryImageParcel">
-          <img src={fondo}></img>
+          {parcela.galeria.map((imagen) => (
+            <div key={imagen.idImg}>
+              <p>{imagen.mensaje}</p>
+              <img src={imageGaleria9} alt={imagen.mensaje} />
+            </div>
+          ))}
         </div>
         {/* <CarruselGaleria className="CarruselGaleria" parcela={parcela} /> */}
       </div>

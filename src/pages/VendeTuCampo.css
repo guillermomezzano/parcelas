@@ -25,7 +25,64 @@
     font-size: xx-large;
     margin-top: 1%;
   }
+  .divConteinerFormContactFooter{
+    padding: 3%;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(53, 52, 52);
+  }
   
+  .divConteinerFormContactFooter h1{
+    margin-bottom: 2%;
+    font-size: 50px;
+  }
+  
+  .conteinerFormContactFooter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .conteinerFormContactFooter div > input{
+    width: 700px;
+    height: 70px;
+    margin: 1%;
+    font-size: x-large;
+    padding: 2%;
+    
+  }
+  .conteinerFormContactFooter input:focus , textarea:focus{
+    outline: none;
+  }
+
+  .conteinerFormContactFooter  textarea{
+    width: 80%;
+    font-size: x-large;
+    margin-top: 2%;
+    
+  }
+  
+  .btnFormContactFooter{
+    font-size: x-large;
+    margin-top: 2%;
+    width: 50%;
+    height: 70px;
+    color:white;
+    text-transform: uppercase;
+    border-style: none;
+    background-color: black;
+    border-radius: 6px;
+    transition: 1s;
+  }
+  
+  .btnFormContactFooter:hover{
+    cursor: pointer;
+    color:black;
+    background-color: white;
+    transition: 1s;
+  }
   @media (max-width: 50.625em) {
 
     .headerVendeTuCampo{
@@ -43,3 +100,6 @@
       font-size:30px;     
     }
   }
+ 
+
+ 

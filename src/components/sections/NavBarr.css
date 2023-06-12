@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+/* 
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Titillium Web", sans-serif;
+} */
+
+:root {
+	--mainColor: black;
+	--mainColorLight: #5767aa;
+	--secondaryColor: green;
+	--textColor: #eee;
+}
+
+
+/* ___________styles for the top and navbar___________ */
+
+.topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background-color:rgb(53, 52, 52);
+    padding: 0px 230px 0px 200px; 
+   
+  }
+  
+  
+  .topBarContenedorCorreo{
+    font-size: x-large;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+.imageLogo{
+	
+	max-width: 100%;
+}
+
+header {
+	padding: 0px 205px 0px 200px; 
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 120px;
+	font-size: x-large;
+	/* padding: 0 2rem; */
+	background-color: var(--mainColor);
+	color: var(--textColor);
+    
+}
+
+/* dropdown styles */
+.dropbtn {
+	background-color: var(--mainColor);
+	color: white;
+	border: none;
+	font-size: x-large;
+	font-family: 'Playfair Display', serif;
+  }
+  
+  .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .dropdown-content {
+	left: -50%;
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 400px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  .dropdown-content a {
+	margin: 0%;
+	color: black;
+	padding: 12px 0px 16px 0px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+
+/* dropdown styles */
+nav a {
+	margin: 0 2rem;
+	color: var(--textColor);
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+nav a:hover {
+	color: var(--secondaryColor);
+	transition: 0.9s;
+}
+
+header .nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: var(--textColor);
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
+	display: none;
+}
+
+header div,
+nav {
+	display: flex;
+	align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+    .topBar{
+        display: none;
+      }
+  
+	.imageLogo{
+		width: 75%;
+	}
+
+	  header{
+	padding: 0 2rem;
+	height: 80px;	
+	}
+
+	header .nav-btn {
+		visibility: visible;
+		opacity: 1;
+		display: block;
+		
+	}
+
+	header nav {
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: var(--mainColor);
+		transition: 1s;
+        z-index: 1;
+	}
+	
+	.dropdown:hover .dropdown-content {display: none;}
+	
+	header .responsive_nav {
+		transform: translateY(100vh);
+	}
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	nav a {
+		font-size: 1.5rem;
+	}
+}

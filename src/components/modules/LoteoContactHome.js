@@ -8,7 +8,7 @@ const LoteoContactHome = () => {
       <div className="conteinerFormHomeVendeTuLoteoImg">
         <div className="conteinerFormHomeVendeTuLoteo">
           <div className="conteinerImageLoteo">
-            <img src={mapaLoteo}></img>
+            <img src={mapaLoteo} alt="" />
             <div>
               <h2>¿Tienes un loteo que deseas vender?</h2>
               <p>¡En Compra Tu Parcela te brindamos la solución!</p>

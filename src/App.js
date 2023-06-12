@@ -1,15 +1,21 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+import GlobalState from "./context/GlobalState";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
+
+// Components
+import Loader from "./components/modules/ui/Loader";
+import SnackbarMessage from "./components/modules/ui/SnackbarMessage";
+
 import "./App.css";
 import Home from "./pages/Home";
-import Parcela from "./pages/Parcela";
-import HaciendaSantaJulia from "./pages/HaciendaSantaJulia";
-import ValleDelToro from "./pages/ValleDelToro";
-import ElEncantoDeCuracavi from "./pages/ElEncantoDeCuracavi";
-import ElEncantoDeCuracaviII from "./pages/ElEncantoDeCuracaviII";
-import ElEncantoDeLoreto from "./pages/ElEncantoDeLoreto";
+// import Parcela from "./pages/Parcela";
+import ParcelaHaciendaSantaJulia from "./pages/ParcelaHaciendaSantaJulia";
+import ParcelaValleDelToro from "./pages/ParcelaValleDelToro";
+import ParcelaElEncantoDeCuracavi from "./pages/ParcelaElEncantoDeCuracavi";
+import ParcelaElEncantoDeCuracaviII from "./pages/ParcelaElEncantoDeCuracaviII";
+import ParcelaElEncantoDeLoreto from "./pages/ParcelaElEncantoDeLoreto";
 import VendeTuCampo from "./pages/VendeTuCampo";
 import QuinesSomos from "./pages/QuienesSomos";
 import Contacto from "./pages/Contacto";
@@ -18,25 +24,34 @@ import Proyectos from "./pages/Proyectos";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Proyectos" element={<Proyectos />} />
-          <Route
-            path="/ElEncantoDeCuracavi"
-            element={<ElEncantoDeCuracavi />}
-          />
-          <Route
-            path="/ElEncantoDeCuracaviII"
-            element={<ElEncantoDeCuracaviII />}
-          />
-          <Route path="/ElEncantoDeLoreto" element={<ElEncantoDeLoreto />} />
-          <Route path="/ValleDelToro" element={<ValleDelToro />} />
-          <Route path="/HaciendaSantaJulia" element={<HaciendaSantaJulia />} />
-          <Route path="/VendeTuCampo" element={<VendeTuCampo />} />
-          <Route path="/QuinesSomos" element={<QuinesSomos />} />
-          <Route path="/Contacto" element={<Contacto />} />
-          {/* <Route
+      <GlobalState>
+        <Loader />
+        <SnackbarMessage />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Proyectos" element={<Proyectos />} />
+            <Route
+              path="/ElEncantoDeCuracavi"
+              element={<ParcelaElEncantoDeCuracavi />}
+            />
+            <Route
+              path="/ElEncantoDeCuracaviII"
+              element={<ParcelaElEncantoDeCuracaviII />}
+            />
+            <Route
+              path="/ElEncantoDeLoreto"
+              element={<ParcelaElEncantoDeLoreto />}
+            />
+            <Route path="/ValleDelToro" element={<ParcelaValleDelToro />} />
+            <Route
+              path="/HaciendaSantaJulia"
+              element={<ParcelaHaciendaSantaJulia />}
+            />
+            <Route path="/VendeTuCampo" element={<VendeTuCampo />} />
+            <Route path="/QuinesSomos" element={<QuinesSomos />} />
+            <Route path="/Contacto" element={<Contacto />} />
+            {/* <Route
             path="/ElEncantoDeCuracavi"
             element={<Parcela idParcela={"P1"} />}
           />
@@ -53,8 +68,9 @@ function App() {
             path="/HaciendaSantaJulia"
             element={<Parcela idParcela={"P5"} />}
           /> */}
-        </Routes>
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
+      </GlobalState>
     </div>
   );
 }

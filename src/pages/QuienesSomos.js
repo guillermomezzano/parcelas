@@ -1,5 +1,5 @@
 // componentes
-import Navbar from "../components/modules/Navbar";
+import Navbar from "../components/sections/Navbar";
 import Footer from "../components/sections/Footer";
 //styles
 import imageGaleria from "../image/imageVendeLoteo.jpg";
@@ -48,7 +48,7 @@ const QuinesSomos = () => {
           </p>
         </div>
         <div className="divImgQuinesSomos">
-          <img src={imageGaleria}></img>
+          <img src={imageGaleria} alt=""></img>
         </div>
         <div className="divInfoQuinesSomos">
           <h1>¡LO SOÑASTE, LO LOGRASTE!</h1>
@@ -86,7 +86,7 @@ const QuinesSomos = () => {
           </p>
         </div>
         <div className="divImgQuinesSomos">
-          <img src={imageGaleria}></img>
+          <img src={imageGaleria} alt=""></img>
         </div>
         <div className="divInfoQuinesSomos">
           <h1>NUESTRA VISIÓN</h1>
