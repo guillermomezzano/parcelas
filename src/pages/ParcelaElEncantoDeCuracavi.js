@@ -12,11 +12,11 @@ import Footer from "../components/sections/Footer";
 import imageGaleria1 from "../image/elEncantoDeCuracavi/1.jpg";
 import imageGaleria2 from "../image/elEncantoDeCuracavi/2.jpg";
 import imageGaleria3 from "../image/elEncantoDeCuracavi/3.jpg";
-import imageGaleria4 from "../image/elEncantoDeCuracavi/4.jpeg";
-import imageGaleria5 from "../image/elEncantoDeCuracavi/5.jpeg";
+import imageGaleria4 from "../image/elEncantoDeCuracavi/4.jpg";
+import imageGaleria5 from "../image/elEncantoDeCuracavi/5.jpg";
 import imageGaleria6 from "../image/elEncantoDeCuracavi/6.jpg";
-import imageGaleria7 from "../image/elEncantoDeCuracavi/7.jpeg";
-import imageGaleria8 from "../image/elEncantoDeCuracavi/8.jpeg";
+import imageGaleria7 from "../image/elEncantoDeCuracavi/7.jpg";
+import imageGaleria8 from "../image/elEncantoDeCuracavi/8.jpg";
 import imageGaleria9 from "../image/elEncantoDeCuracavi/9.jpg";
 
 //iconos

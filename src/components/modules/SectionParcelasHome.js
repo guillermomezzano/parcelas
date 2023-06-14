@@ -12,9 +12,9 @@ import "./SectionParcelasHome.css";
 //image
 import HaciendaSantaJulia from "../../image/haciendaSantaJulia/6.jpg";
 import ElEncantoDeLoreto from "../../image/elEncantoDeLoreto/17.jpg";
-import carruselElEncantoDeCuracavi from "../../image/elEncantoDeCuracavi/10.jpeg";
+import carruselElEncantoDeCuracavi from "../../image/elEncantoDeCuracavi/10.jpg";
 import ValleDelToro from "../../image/valleDelToro/12.jpg";
-import carruselElEncantoDeCuracaviII from "../../image/elEncantoDeCuracaviII/10.jpeg";
+import carruselElEncantoDeCuracaviII from "../../image/elEncantoDeCuracaviII/10.jpg";
 
 const SectionParcelasHome = () => {
   const { ui } = useContext(GlobalContext);
