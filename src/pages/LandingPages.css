@@ -1,0 +1,53 @@
+.divInfoQuinesSomos{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  .divInfoQuinesSomos h1{
+    margin-top: 6%;
+    font-size: 600%;
+    text-transform: uppercase;
+  }
+
+  .header {
+    background-color: black;
+  }
+
+  .divVideo{
+    height: 700px;
+  }
+
+  .divImg{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .divImg img{
+   width: 370px;
+   margin-bottom: 2%;
+  }
+
+  .btnFonteinerFormContact{
+    font-size: x-large;
+    width: 90%;
+    height: 100px;
+    color:white;
+    text-transform: uppercase;
+    border-style: none;
+    background-color: black;
+    border-radius: 6px;
+    
+    
+  }
+  
+  .btnFonteinerFormContact:hover{
+    cursor: pointer;
+    background-color:rgb(53, 52, 52);
+  
+  }
+
+  .divDetalleFinanciamiento{
+    margin: 1%;
+  }

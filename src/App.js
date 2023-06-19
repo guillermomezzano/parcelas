@@ -20,6 +20,7 @@ import VendeTuCampo from "./pages/VendeTuCampo";
 import QuinesSomos from "./pages/QuienesSomos";
 import Contacto from "./pages/Contacto";
 import Proyectos from "./pages/Proyectos";
+import LandingPage from "./pages/LandingPages";
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
             <Route path="/VendeTuCampo" element={<VendeTuCampo />} />
             <Route path="/QuinesSomos" element={<QuinesSomos />} />
             <Route path="/Contacto" element={<Contacto />} />
+            <Route path="/LandingPage" element={<LandingPage />} />
             {/* <Route
             path="/ElEncantoDeCuracavi"
             element={<Parcela idParcela={"P1"} />}
