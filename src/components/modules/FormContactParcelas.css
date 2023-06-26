@@ -1,4 +1,4 @@
-.divConteinerFormContactFooter{
+.divConteinerFormContactParcelas{
     padding: 3%;
     color: #fff;
     width: 100%;
@@ -6,12 +6,12 @@
     background-color:rgb(53, 52, 52);
   }
   
-  .divConteinerFormContactFooter h1{
+  .divConteinerFormContactParcelas h1{
     margin-bottom: 2%;
     font-size: 50px;
   }
   
-  .conteinerFormContactFooter{
+  .conteinerFormContactParcelas{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,21 +19,21 @@
   }
   
   
-  .conteinerFormContactFooter div > input{
+  .conteinerFormContactParcelas div > input{
     padding: 1%;
     font-size: x-large;
-    width: 700px;
+    width: 750px;
     height: 70px;
     margin: 1%;
    
     
     
   }
-  .conteinerFormContactFooter input:focus , textarea:focus{
+  .conteinerFormContactParcelas input:focus , textarea:focus{
     outline: none;
   }
   
-  .conteinerFormContactFooter select{
+  .conteinerFormContactParcelas select{
     font-size: x-large;
     margin-top: 1%;
     height: 70px;
@@ -42,7 +42,7 @@
     outline: none;
   }
   
-  .conteinerFormContactFooter  textarea{
+  .conteinerFormContactParcelas  textarea{
     padding: 2%;
     width: 80%;
     font-size: x-large;
@@ -50,7 +50,7 @@
     
   }
   
-  .btnFonteinerFormContactFooter{
+  .btnFormContactParcelas{
     font-size: x-large;
     margin-top: 2%;
     width: 50%;
@@ -64,7 +64,7 @@
     
   }
   
-  .btnFonteinerFormContactFooter:hover{
+  .btnFormContactParcelas:hover{
     cursor: pointer;
     color:black;
     background-color: white;
@@ -73,7 +73,11 @@
 
 
   @media (max-width: 50.625em){
-    .conteinerFormContactFooter select{
-      width: 90%;    
+    .conteinerFormContactParcelas select{
+      width: 80%;    
+    }
+
+    .conteinerFormContactParcelas div > input{
+      width: 270px
     }
   }

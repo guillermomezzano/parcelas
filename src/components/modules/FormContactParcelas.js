@@ -29,9 +29,9 @@ const FormContactParcelas = () => {
   };
 
   return (
-    <div className="divConteinerFormContactFooter">
+    <div className="divConteinerFormContactParcelas">
       <form
-        className="conteinerFormContactFooter"
+        className="conteinerFormContactParcelas"
         ref={form}
         onSubmit={sendEmail}
       >
@@ -73,11 +73,7 @@ const FormContactParcelas = () => {
           <option value="proyecto5">Valle Del Toro</option>
         </select>
         <textarea rows="7" cols="50" name="message" required></textarea>
-        <button
-          className="btnFonteinerFormContactFooter"
-          type="submit"
-          value="Send"
-        >
+        <button className="btnFormContactParcelas" type="submit" value="Send">
           agendar
         </button>
       </form>

@@ -1,6 +1,6 @@
 /* ___________styles of Footer___________ */
 
-.conteinerFooterHome{
+  .conteinerFooterHome{
     display: block; 
     padding: 3%;
     background-color:black;
@@ -8,57 +8,52 @@
     margin-top: 260px;
     }
     
-    .conteinerFooterHome img {
-        width: 8%;
-        margin-bottom: 1%;
-    }
+  .conteinerFooterHome img {
+    width: 8%;
+    margin-bottom: 1%;
+  }
     
-    .conteinerFooterHome h4 {
-      margin-top: 1%;
-      color: #fff;
-    }
+  .conteinerFooterHome h4 {
+    margin-top: 1%;
+    color: #fff;
+  }
     
-    .conteinerEnlacesFooterWasapInstagram{
-      display: flex;
-      justify-content: center;
-      color: #fff;
-    }
-    .conteinerEnlacesFooterWasapInstagram img{
-     height: 35px;
-     width: 35px;
-    }
-    .conteinerEnlacesFooterWasapInstagram p{
-      margin-top: 4px;
-      margin-left: 4px;
-    }
-    
-    
-    .conteinerFooter{
-      padding: 3%;
-      background-color:black;
-      }
+  .conteinerEnlacesFooterWasapInstagram{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+  }
+  .conteinerEnlacesFooterWasapInstagram img{
+    height: 35px;
+    width: 35px;
+  }
+  .conteinerEnlacesFooterWasapInstagram p{
+    margin-top: 4px;
+    margin-left: 4px;
+  }
     
     
-    .conteinerFooter img {
-      margin-bottom: 1%;
-     
-    }
+  .conteinerFooter{
+    padding: 3%;
+    background-color:black;
+  }
     
-    .conteinerFooter h4 {
-      margin-top: 2%;
-      color: #fff;
-    }
     
-    #logoFooter{
-      width: 10%;
-    }
+  .conteinerFooter img {
+    margin-bottom: 1%;
+  }
+    
+  .conteinerFooter h4 {
+    margin-top: 2%;
+    color: #fff;
+  }
+    
 
 
 @media (max-width: 50.625em) {
 
   #logoFooter{
     margin-bottom: 2%;
-    height: 50px;
     width: 150px;
   }
 
@@ -85,5 +80,9 @@
 
   h4{
     font-size: medium;
+  }
+  
+  .conteinerEnlacesFooterWasapInstagram p{
+    display: none;
   }
 }
