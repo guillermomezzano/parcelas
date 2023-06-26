@@ -11,7 +11,7 @@ const NabVar = () => {
     navRef.current.classList.toggle("responsive_nav");
   };
 
-  console.log(navRef);
+  // console.log(navRef);
 
   return (
     <>

@@ -8,7 +8,6 @@ import GlobalState from "./context/GlobalState";
 import Loader from "./components/modules/ui/Loader";
 import SnackbarMessage from "./components/modules/ui/SnackbarMessage";
 
-import "./App.css";
 import Home from "./pages/Home";
 // import Parcela from "./pages/Parcela";
 import ParcelaHaciendaSantaJulia from "./pages/ParcelaHaciendaSantaJulia";
@@ -21,6 +20,7 @@ import QuinesSomos from "./pages/QuienesSomos";
 import Contacto from "./pages/Contacto";
 import Proyectos from "./pages/Proyectos";
 import LandingPage from "./pages/LandingPages";
+import "./App.css";
 
 function App() {
   return (

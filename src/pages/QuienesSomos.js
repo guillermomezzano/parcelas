@@ -1,13 +1,12 @@
 // componentes
 import Navbar from "../components/sections/Navbar";
 import Footer from "../components/sections/Footer";
+import "./QuienesSomos.css";
 //styles
 import imageGaleria from "../image/imageVendeLoteo.jpg";
 //react
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-
-import "./QuienesSomos.css";
 
 const QuinesSomos = () => {
   const form = useRef();

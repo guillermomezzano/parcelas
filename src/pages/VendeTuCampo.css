@@ -25,7 +25,7 @@
     font-size: xx-large;
     margin-top: 1%;
   }
-  .divConteinerFormContactFooter{
+  .divConteinerFormContactVendeTuCampo{
     padding: 3%;
     color: #fff;
     width: 100%;
@@ -33,38 +33,38 @@
     background-color:rgb(53, 52, 52);
   }
   
-  .divConteinerFormContactFooter h1{
+  .divConteinerFormContactVendeTuCampo h1{
     margin-bottom: 2%;
     font-size: 50px;
   }
   
-  .conteinerFormContactFooter{
+  .conteinerFormContactVendeTuCampo{
     display: flex;
     flex-direction: column;
     align-items: center;
     
   }
-  
-  .conteinerFormContactFooter div > input{
-    width: 700px;
+
+  .conteinerFormContactVendeTuCampo div > input{
+    width: 750px;
     height: 70px;
     margin: 1%;
     font-size: x-large;
     padding: 2%;
     
   }
-  .conteinerFormContactFooter input:focus , textarea:focus{
+  .conteinerFormContactVendeTuCampo input:focus , textarea:focus{
     outline: none;
   }
 
-  .conteinerFormContactFooter  textarea{
+  .conteinerFormContactVendeTuCampo  textarea{
     width: 80%;
     font-size: x-large;
     margin-top: 2%;
     
   }
   
-  .btnFormContactFooter{
+  .btnFormContactVendeTuCampo{
     font-size: x-large;
     margin-top: 2%;
     width: 50%;
@@ -77,7 +77,7 @@
     transition: 1s;
   }
   
-  .btnFormContactFooter:hover{
+  .btnFormContactVendeTuCampo:hover{
     cursor: pointer;
     color:black;
     background-color: white;
@@ -86,10 +86,11 @@
   @media (max-width: 50.625em) {
 
     .headerVendeTuCampo{
- 
       height: 450px;
-   
-      
+    }
+    
+    .divInputForm input{
+      width: 300px;
     }
     
     .divTitleFormVendeTuCampo h1{
@@ -98,6 +99,10 @@
 
     .divTitleFormVendeTuCampo p{
       font-size:30px;     
+    }
+
+    .conteinerFormContactVendeTuCampo div > input{
+      width: 270px
     }
   }
  

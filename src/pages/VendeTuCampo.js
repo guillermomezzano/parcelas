@@ -1,7 +1,9 @@
+import React, { useRef } from "react";
+
 import Navbar from "../components/sections/Navbar";
 import Footer from "../components/sections/Footer";
 import "./VendeTuCampo.css";
-import React, { useRef } from "react";
+
 import emailjs from "@emailjs/browser";
 
 const VendeTuCampo = () => {
@@ -39,14 +41,14 @@ const VendeTuCampo = () => {
           contactará.
         </p>
       </div>
-      <div className="divConteinerFormContactFooter">
+      <div className="divConteinerFormContactVendeTuCampo">
         <form
-          className="conteinerFormContactFooter"
+          className="conteinerFormContactVendeTuCampo"
           ref={form}
           onSubmit={sendEmail}
         >
           <h1>Contacta con nuestros asesores</h1>
-          <div>
+          <div className="divInputForm">
             <input
               type="text"
               name="user_name"
@@ -87,7 +89,11 @@ const VendeTuCampo = () => {
           </div>
 
           <textarea rows="7" cols="50" required></textarea>
-          <button className="btnFormContactFooter" type="submit" value="Send">
+          <button
+            className="btnFormContactVendeTuCampo"
+            type="submit"
+            value="Send"
+          >
             agendar
           </button>
         </form>

@@ -1,4 +1,5 @@
 import ReactPlayer from "react-player";
+import Slider from "react-slick";
 //components
 import Footer from "../components/sections/Footer";
 
@@ -15,13 +16,43 @@ import ValleDelToro from "../image/valleDelToro/12.jpg";
 import carruselElEncantoDeCuracaviII from "../image/elEncantoDeCuracaviII/10.jpg";
 
 const landingPage = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SampleNextArrow />,
+  };
+
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: "flex",
+          alignItems: "center",
+          background: "black",
+          height: "200px",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
   return (
     <div>
       <div className="header">
         <img src={logo} alt="" />
       </div>
 
-      <div className="divInfoQuinesSomos">
+      <div className="divTitle">
         <h1>conoce nuestras parcelas</h1>
       </div>
       <div className="divVideo">
@@ -32,7 +63,7 @@ const landingPage = () => {
           height="100%"
         />
       </div>
-      <div className="divInfoQuinesSomos">
+      <div className="divTitle">
         <h1>nuestros proyectos</h1>
       </div>
       <div className="divImg">
@@ -42,7 +73,16 @@ const landingPage = () => {
         <img src={ValleDelToro} alt=""></img>
         <img src={carruselElEncantoDeCuracaviII} alt=""></img>
       </div>
-      <div className="divInfoQuinesSomos">
+      <div className="conteinerCarruselGaleryImage">
+        <Slider {...settings}>
+          <img src={HaciendaSantaJulia} alt="" />
+          <img src={ElEncantoDeLoreto} alt="" />
+          <img src={carruselElEncantoDeCuracavi} alt="" />
+          <img src={ValleDelToro} alt="" />
+          <img src={carruselElEncantoDeCuracaviII} alt="" />
+        </Slider>
+      </div>
+      <div className="divTitle">
         <h1>contacta a nuestros ejecutivos</h1>
         <a href="https://wa.link/sy5gyq">
           <button
@@ -51,11 +91,11 @@ const landingPage = () => {
             className="btnFonteinerFormContact"
           >
             <img src={logoWasap} alt=""></img>
-            escribenos
+            <p>escribenos</p>
           </button>
         </a>
       </div>
-      <div className="divInfoQuinesSomos">
+      <div className="divTitle">
         <h1>formas de financiamiento</h1>
       </div>
       <div className="divVideo">
@@ -67,12 +107,12 @@ const landingPage = () => {
         />
       </div>
       <div className="divDetalleFinanciamiento">
-        <h1>contado</h1>
-        <h1>credito directo</h1>
-        <h1>credito bancario</h1>
+        <h3>contado</h3>
+        <h3>credito directo</h3>
+        <h3>credito bancario</h3>
       </div>
-      <div className="divInfoQuinesSomos">
-        <h1>¿ qué documentos necesito ?</h1>
+      <div className="divTitle">
+        <h1>¿qué documentos necesito?</h1>
       </div>
       <div className="divVideo">
         <ReactPlayer
@@ -82,20 +122,21 @@ const landingPage = () => {
           height="100%"
         />
       </div>
-      <div className="divInfoQuinesSomos">
-        <h1>¿ estas listo para cambiar tu vida y la de tu familia ?</h1>
+      <div className="divTitle">
+        <h1>¿estas listo para cambiar tu vida y la de tu familia?</h1>
         <a href="https://wa.link/sy5gyq">
           <button
             type="submit"
             value="Send"
             className="btnFonteinerFormContact"
           >
-            contactanos
+            <img src={logoWasap} alt=""></img>
+            <p>escribenos</p>
           </button>
         </a>
       </div>
 
-      <div className="divInfoQuinesSomos">
+      <div className="divTitle">
         <h1>contactanos ahora y obten un bono de 2.000.000 de pesos</h1>
         <a href="https://wa.link/sy5gyq">
           <button
@@ -103,7 +144,8 @@ const landingPage = () => {
             value="Send"
             className="btnFonteinerFormContact"
           >
-            contactanos
+            <img src={logoWasap} alt=""></img>
+            <p>escribenos</p>
           </button>
         </a>
       </div>
