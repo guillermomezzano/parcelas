@@ -61,8 +61,7 @@
   
   .btnFonteinerFormContact{
     font-size: x-large;
-    width: 90%;
-    height: 100px;
+    max-width: 609px;
     color:white;
     text-transform: uppercase;
     border-style: none;
@@ -114,10 +113,8 @@
    
     }
 
-
     .btnFonteinerFormContact{
       margin-top: 5%;
-      margin-bottom: 5%;
-      
+      max-width: 90%;
     }
 }
